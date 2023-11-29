@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="mymeg.css">
+<style>
+  /* Center the loader */
+  .holder {
+  margin: 12rem auto 0;
+  width: 150px;
+  height: 400px;
+  position: relative;
+}
+
+.holder *, .holder *:before, .holder *:after {
+  position: absolute;
+  content: "";
+}
+
+.candle {
+  bottom: 0;
+  width: 150px;
+  height: 300px;
+  border-radius: 150px / 40px;
+  -webkit-box-shadow: inset 20px -30px 50px 0 rgba(0, 0, 0, 0.4), inset -20px 0 50px 0 rgba(0, 0, 0, 0.4);
+  box-shadow: inset 20px -30px 50px 0 rgba(0, 0, 0, 0.4), inset -20px 0 50px 0 rgba(0, 0, 0, 0.4);
+  background: #190f02;
+  background: -webkit-gradient(linear, left top, left bottom, from(#e48825), color-stop(#e78e0e), color-stop(#833c03), color-stop(50%, #4c1a03), to(#1c0900));
+  background: linear-gradient(#e48825, #e78e0e, #833c03, #4c1a03 50%, #1c0900);
+}
+
+.candle:before {
+  width: 100%;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid #d47401;
+  background: #b86409;
+  background: radial-gradient(#ffef80, #b86409 60%);
+  background: radial-gradient(#eaa121, #8e4901 45%, #b86409 80%);
+}
+
+.candle:after {
+  width: 34px;
+  height: 10px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  border-radius: 50%;
+  top: 14px;
+  -webkit-box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.5);
+  background: radial-gradient(rgba(0, 0, 0, 0.6), transparent 45%);
+}
+
+.thread {
+  width: 6px;
+  height: 36px;
+  top: -17px;
+  left: 50%;
+  z-index: 1;
+  border-radius: 40% 40% 0 0;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  background: #121212;
+  background: -webkit-gradient(linear, left top, left bottom, from(#d6994a), color-stop(#4b232c), color-stop(#121212), color-stop(black), color-stop(90%, #e8bb31));
+  background: linear-gradient(#d6994a, #4b232c, #121212, black, #e8bb31 90%);
+}
+
+.flame {
+  width: 24px;
+  height: 120px;
+  left: 50%;
+  -webkit-transform-origin: 50% 100%;
+  -ms-transform-origin: 50% 100%;
+  transform-origin: 50% 100%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  bottom: 100%;
+  border-radius: 50% 50% 20% 20%;
+  background: rgba(255, 255, 255, 1);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(80%, white), to(transparent));
+  background: linear-gradient(white 80%, transparent);
+  -webkit-animation: moveFlame 6s linear infinite, enlargeFlame 5s linear infinite;
+  animation: moveFlame 6s linear infinite, enlargeFlame 5s linear infinite;
+}
+
+.flame:before {
+  width: 100%;
+  height: 100%;
+  border-radius: 50% 50% 20% 20%;
+  -webkit-box-shadow: 0 0 15px 0 rgba(247, 93, 0, .4), 0 -6px 4px 0 rgba(247, 128, 0, .7);
+  box-shadow: 0 0 15px 0 rgba(247, 93, 0, .4), 0 -6px 4px 0 rgba(247, 128, 0, .7);
+}
+
+@-webkit-keyframes moveFlame {
+  0%, 100% {
+    -webkit-transform: translateX(-50%) rotate(-2deg);
+    transform: translateX(-50%) rotate(-2deg);
+  }
+
+  50% {
+    -webkit-transform: translateX(-50%) rotate(2deg);
+    transform: translateX(-50%) rotate(2deg);
+  }
+}
+
+@keyframes moveFlame {
+  0%, 100% {
+    -webkit-transform: translateX(-50%) rotate(-2deg);
+    transform: translateX(-50%) rotate(-2deg);
+  }
+
+  50% {
+    -webkit-transform: translateX(-50%) rotate(2deg);
+    transform: translateX(-50%) rotate(2deg);
+  }
+}
+
+@-webkit-keyframes enlargeFlame {
+  0%, 100% {
+    height: 120px;
+  }
+
+  50% {
+    height: 140px;
+  }
+}
+
+@keyframes enlargeFlame {
+  0%, 100% {
+    height: 120px;
+  }
+
+  50% {
+    height: 140px;
+  }
+}
+
+.glow {
+  width: 26px;
+  height: 60px;
+  border-radius: 50% 50% 35% 35%;
+  left: 50%;
+  top: -48px;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  background: rgba(0, 133, 255, .7);
+  -webkit-box-shadow: 0 -40px 30px 0 #dc8a0c, 0 40px 50px 0 #dc8a0c, inset 3px 0 2px 0 rgba(0, 133, 255, .6), inset -3px 0 2px 0 rgba(0, 133, 255, .6);
+  box-shadow: 0 -40px 30px 0 #dc8a0c, 0 40px 50px 0 #dc8a0c, inset 3px 0 2px 0 rgba(0, 133, 255, .6), inset -3px 0 2px 0 rgba(0, 133, 255, .6);
+}
+
+.glow:before {
+  width: 70%;
+  height: 60%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  bottom: 0;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.35);
+}
+
+.blinking-glow {
+  width: 100px;
+  height: 180px;
+  left: 50%;
+  top: -55%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  border-radius: 50%;
+  background: #ff6000;
+  -webkit-filter: blur(50px);
+  -moz-filter: blur(60px);
+  -o-filter: blur(60px);
+  -ms-filter: blur(60px);
+  filter: blur(60px);
+  -webkit-animation: blinkIt .1s infinite;
+  animation: blinkIt .1s infinite;
+}
+
+@-webkit-keyframes blinkIt {
+  50% {
+    opacity: .8;
+  }
+}
+
+@keyframes blinkIt {
+  50% {
+    opacity: .8;
+  }
+}
+
+
+
+  
+  @-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  /* Add animation to "page content" */
+  .animate-bottom {
+    position: relative;
+    -webkit-animation-name: animatebottom;
+    -webkit-animation-duration: 1s;
+    animation-name: animatebottom;
+    animation-duration: 1s
+  }
+  
+  @-webkit-keyframes animatebottom {
+    from { bottom:-100px; opacity:0 } 
+    to { bottom:0px; opacity:1 }
+  }
+  
+  @keyframes animatebottom { 
+    from{ bottom:-100px; opacity:0 } 
+    to{ bottom:0; opacity:1 }
+  }
+  
+  #myDiv {
+    display: none;
+    text-align: center;
+  }
+
+  .my{
+    background-color: black;height: 775px;width: 100%;float: left;
+  }
+  </style>
+
+
+
+
+
+</head>
+<body>
+
+
+  <body onload="myFunction()" style="margin:0;">
+
+    <div id="loader">
+
+      <div class="my">
+      <div class="holder">
+        <div class="candle">
+          <div class="blinking-glow"></div>
+          <div class="thread"></div>
+          <div class="glow"></div>
+          <div class="flame"></div>
+        </div>
+      </div>
+    </div>
+      
+
+
+
+    </div>
+    
+    <div style="display:none;" id="myDiv" class="animate-bottom">
+
+
+
+
+
+
+
+
+
+
+
+  
+<div class="h50 w100">
+
+   	<div class="h50 w80 fl " style="background: #464c4f;">
+   		<i class="fa fa-clock-o font20 pclw mrl100" aria-hidden="true" ></i>
+   		<span style="color:white;">2023-09-19</span>
+   		<i class="fa fa-bolt font20 pclw mrl10" aria-hidden="true"></i>
+   		<span style="color:white;">bapunager,ahmedbad</span>
+    </div>
+
+     <div class="h50 w20 fl" style="background:#464c4f;">
+   		<i class="fa fa-facebook blk font20 mrl10" aria-hidden="true" ></i>
+   		<i class="fa fa-twitter blk font20 mrl10" aria-hidden="true" ></i>
+   		<i class="fa fa-instagram blk font20 mrl10" aria-hidden="true" ></i>
+   	</div>
+</div>
+
+
+
+<div class="h100 w100  ">
+	<div class="h100 w30  fl" >
+   		<img src="1.png" class="mrl100 mt20" >
+     </div>
+
+      <div class="h100 w70 fl">
+   	<a href="index.html">  <span class="blk1  fl font10 mt30 " >HOME</span></a>
+   	<a href="Blog.html">	<span class="blk1 fl font10 mt30 mrl20" >BLOG</span></a>
+   	<a href="SHOPLIST.html">	<span class="blk1 fl font10 mt30 mrl20" >SHOP LIST</span></a>
+   	<a href="ACCOUNT.html">	<span class="blk1 fl font10 mt30 mrl20" >ACCOUNT</span></a>
+   	<a href="CART.html">	<span class="blk1 fl font10 mt30 mrl20" >CART</span></a>
+   	<a href="CHECKOUT.html"><span class="blk1 fl font10 mt30 mrl20" >CHECKOUT</span></a>
+   		<span class="blk1 fl font10 mt30 mrl20" >DETAIL</span>
+    <a href="ABOUT US.html">   <span class="blk1 fl font10 mt30 mrl20" >ABOUT US</span></a>
+    <a href="CONTACT US.html">  <span class="blk1 fl font10 mt30 mrl20" >CONTACT US</span></a>
+        <i class="fa fa-search blk1 mrl30 mt30" aria-hidden="true"></i>
+       </div>
+
+</div>
+
+<div class="h150 w100" style="background: #464c4f"></div>
+<div class="h50  w100 " style="margin-top: -10px;">
+  <center>
+    <span class="font20 blk1 clw"> Home | Layout | Grid view  </span>
+    
+  </center>
+</div>
+
+<div class="h500 w100 mrl70">
+
+  <div class="h500 w30 fl bs">
+    <div class="h250 w80 clw mt20 mrl40"><img src="39.jpg" class="h250 w100"></div>
+   <div class="h250 w100 ">
+     <center>
+       <h1 class="font20">Watch: the 3 best performances of<br> the 2018 VMAs</h1>
+       <button class="boxnew btn">#New</button>
+       <button class="boxsports blk4">#Sports</button>
+       <button class="boxtrending btn1">#Trending</button>
+     </center>
+     <p class="mrl60">Lorem Ipsum has been the industry's standard <br>dummy text ever since the 1500s, when an<br> unknown printer took a galley.</p>
+     <i class="fa fa-male blk1 fl mrl50 font30   " aria-hidden="true" ></i>
+            <span class="blk1 fl font20 mrl10 " >john doe</span>
+            <i class="fa fa-clock-o blk1 fl font30 mrl10" aria-hidden="true"></i>
+            <span class="blk1 fl font20 mrl10 "  >12 may</span>
+            <i class="fa fa-comments-o blk1 fl mrl10 " aria-hidden="true" style="font-size:30px;"></i>
+            <span class="blk1 fl font20 mrl10"> 2 comments</span>
+       </div> 
+     </div>
+  
+
+
+
+  <div class="h500 w30  fl bs">
+     <div class="h250 w80 clw mt20 mrl40"><img src="40.jpg" class="h250 w100"></div>
+      <div class="h250 w100 ">
+     <center>
+       <h1 class="font20">“Speaks perfect English”: Trump’s<br> offensive praise of a Patrol agent</h1>
+       <button class="boxnew btn">#New</button>
+       <button class="boxsports btn1">#Sports</button>
+       <button class="boxtrending blk4">#Trending</button>
+     </center>
+     <p class="mrl60">Lorem Ipsum has been the industry's standard <br>dummy text ever since the 1500s, when an<br> unknown printer took a galley.</p>
+     <i class="fa fa-male blk1 fl mrl50 font30   " aria-hidden="true" ></i>
+            <span class="blk1 fl font20 mrl10 " >john doe</span>
+            <i class="fa fa-clock-o blk1 fl font30 mrl10" aria-hidden="true"></i>
+            <span class="blk1 fl font20 mrl10 "  >12 may</span>
+            <i class="fa fa-comments-o blk1 fl mrl10 " aria-hidden="true" style="font-size:30px;"></i>
+            <span class="blk1 fl font20 mrl10"> 2 comments</span>
+       </div> 
+  </div>
+  
+  <div class="h500 w30  fl bs">
+     <div class="h250 w80 clw mt20 mrl40"><img src="41.jpg" class="h250 w100"></div>
+      <div class="h250 w100 ">
+     <center>
+       <h1 class="font20">Watch: the 3 best performances of<br> the 2018 VMAs</h1>
+       <button class="boxnew btn">#New</button>
+       <button class="boxsports blk4">#Sports</button>
+       <button class="boxtrending btn1">#Trending</button>
+     </center>
+     <p class="mrl60">Lorem Ipsum has been the industry's standard <br>dummy text ever since the 1500s, when an<br> unknown printer took a galley.</p>
+     <i class="fa fa-male blk1 fl mrl50 font30   " aria-hidden="true" ></i>
+            <span class="blk1 fl font20 mrl10 " >john doe</span>
+            <i class="fa fa-clock-o blk1 fl font30 mrl10" aria-hidden="true"></i>
+            <span class="blk1 fl font20 mrl10 "  >12 may</span>
+            <i class="fa fa-comments-o blk1 fl mrl10 " aria-hidden="true" style="font-size:30px;"></i>
+            <span class="blk1 fl font20 mrl10"> 2 comments</span>
+       </div> 
+  </div>
+
+</div>
+<div class="h50 w100 "></div>
+
+<!----------1--------->
+
+<div class="h500 w100 mrl70">
+
+  <div class="h500 w30 fl bs">
+    <div class="h250 w80 clw mt20 mrl40"><img src="42.jpg" class="h250 w100"></div>
+   <div class="h250 w100 ">
+     <center>
+       <h1 class="font20">Watch: the 3 best performances of<br> the 2018 VMAs</h1>
+       <button class="boxnew btn">#New</button>
+       <button class="boxsports blk4">#Sports</button>
+       <button class="boxtrending btn1">#Trending</button>
+     </center>
+     <p class="mrl60">Lorem Ipsum has been the industry's standard <br>dummy text ever since the 1500s, when an<br> unknown printer took a galley.</p>
+     <i class="fa fa-male blk1 fl mrl50 font30   " aria-hidden="true" ></i>
+            <span class="blk1 fl font20 mrl10 " >john doe</span>
+            <i class="fa fa-clock-o blk1 fl font30 mrl10" aria-hidden="true"></i>
+            <span class="blk1 fl font20 mrl10 "  >12 may</span>
+            <i class="fa fa-comments-o blk1 fl mrl10 " aria-hidden="true" style="font-size:30px;"></i>
+            <span class="blk1 fl font20 mrl10"> 2 comments</span>
+       </div> 
+     </div>
+  
+
+
+
+  <div class="h500 w30  fl bs">
+     <div class="h250 w80 clw mt20 mrl40"><img src="43.jpg" class="h250 w100"></div>
+      <div class="h250 w100 ">
+     <center>
+       <h1 class="font20">“Speaks perfect English”: Trump’s<br> offensive praise of a Patrol agent</h1>
+       <button class="boxnew btn">#New</button>
+       <button class="boxsports btn1">#Sports</button>
+       <button class="boxtrending blk4">#Trending</button>
+     </center>
+     <p class="mrl60">Lorem Ipsum has been the industry's standard <br>dummy text ever since the 1500s, when an<br> unknown printer took a galley.</p>
+     <i class="fa fa-male blk1 fl mrl50 font30   " aria-hidden="true" ></i>
+            <span class="blk1 fl font20 mrl10 " >john doe</span>
+            <i class="fa fa-clock-o blk1 fl font30 mrl10" aria-hidden="true"></i>
+            <span class="blk1 fl font20 mrl10 "  >12 may</span>
+            <i class="fa fa-comments-o blk1 fl mrl10 " aria-hidden="true" style="font-size:30px;"></i>
+            <span class="blk1 fl font20 mrl10"> 2 comments</span>
+       </div> 
+  </div>
+  
+  <div class="h500 w30  fl bs">
+     <div class="h250 w80 clw mt20 mrl40"><img src="44.jpg" class="h250 w100"></div>
+      <div class="h250 w100 ">
+     <center>
+       <h1 class="font20">Watch: the 3 best performances of<br> the 2018 VMAs</h1>
+       <button class="boxnew btn">#New</button>
+       <button class="boxsports blk4">#Sports</button>
+       <button class="boxtrending btn1">#Trending</button>
+     </center>
+     <p class="mrl60">Lorem Ipsum has been the industry's standard <br>dummy text ever since the 1500s, when an<br> unknown printer took a galley.</p>
+     <i class="fa fa-male blk1 fl mrl50 font30   " aria-hidden="true" ></i>
+            <span class="blk1 fl font20 mrl10 " >john doe</span>
+            <i class="fa fa-clock-o blk1 fl font30 mrl10" aria-hidden="true"></i>
+            <span class="blk1 fl font20 mrl10 "  >12 may</span>
+            <i class="fa fa-comments-o blk1 fl mrl10 " aria-hidden="true" style="font-size:30px;"></i>
+            <span class="blk1 fl font20 mrl10"> 2 comments</span>
+       </div> 
+  </div>
+
+</div>
+<div class="h50 w100 "></div>
+
+<!-----------2----------->
+
+<div class="h500 w100 mrl70">
+
+  <div class="h500 w30 fl bs">
+    <div class="h250 w80 clw mt20 mrl40"><img src="45.jpg" class="h250 w100"></div>
+   <div class="h250 w100 ">
+     <center>
+       <h1 class="font20">Watch: the 3 best performances of<br> the 2018 VMAs</h1>
+       <button class="boxnew btn">#New</button>
+       <button class="boxsports blk4">#Sports</button>
+       <button class="boxtrending btn1">#Trending</button>
+     </center>
+     <p class="mrl60">Lorem Ipsum has been the industry's standard <br>dummy text ever since the 1500s, when an<br> unknown printer took a galley.</p>
+     <i class="fa fa-male blk1 fl mrl50 font30   " aria-hidden="true" ></i>
+            <span class="blk1 fl font20 mrl10 " >john doe</span>
+            <i class="fa fa-clock-o blk1 fl font30 mrl10" aria-hidden="true"></i>
+            <span class="blk1 fl font20 mrl10 "  >12 may</span>
+            <i class="fa fa-comments-o blk1 fl mrl10 " aria-hidden="true" style="font-size:30px;"></i>
+            <span class="blk1 fl font20 mrl10"> 2 comments</span>
+       </div> 
+     </div>
+  
+
+
+
+  <div class="h500 w30  fl bs">
+     <div class="h250 w80 clw mt20 mrl40"><img src="46.jpg" class="h250 w100"></div>
+      <div class="h250 w100 ">
+     <center>
+       <h1 class="font20">“Speaks perfect English”: Trump’s<br> offensive praise of a Patrol agent</h1>
+       <button class="boxnew btn">#New</button>
+       <button class="boxsports btn1">#Sports</button>
+       <button class="boxtrending blk4">#Trending</button>
+     </center>
+     <p class="mrl60">Lorem Ipsum has been the industry's standard <br>dummy text ever since the 1500s, when an<br> unknown printer took a galley.</p>
+     <i class="fa fa-male blk1 fl mrl50 font30   " aria-hidden="true" ></i>
+            <span class="blk1 fl font20 mrl10 " >john doe</span>
+            <i class="fa fa-clock-o blk1 fl font30 mrl10" aria-hidden="true"></i>
+            <span class="blk1 fl font20 mrl10 "  >12 may</span>
+            <i class="fa fa-comments-o blk1 fl mrl10 " aria-hidden="true" style="font-size:30px;"></i>
+            <span class="blk1 fl font20 mrl10"> 2 comments</span>
+       </div> 
+  </div>
+  
+  <div class="h500 w30  fl bs">
+     <div class="h250 w80 clw mt20 mrl40"><img src="47.jpg" class="h250 w100"></div>
+      <div class="h250 w100 ">
+     <center>
+       <h1 class="font20">Watch: the 3 best performances of<br> the 2018 VMAs</h1>
+       <button class="boxnew btn">#New</button>
+       <button class="boxsports blk4">#Sports</button>
+       <button class="boxtrending btn1">#Trending</button>
+     </center>
+     <p class="mrl60">Lorem Ipsum has been the industry's standard <br>dummy text ever since the 1500s, when an<br> unknown printer took a galley.</p>
+     <i class="fa fa-male blk1 fl mrl50 font30   " aria-hidden="true" ></i>
+            <span class="blk1 fl font20 mrl10 " >john doe</span>
+            <i class="fa fa-clock-o blk1 fl font30 mrl10" aria-hidden="true"></i>
+            <span class="blk1 fl font20 mrl10 "  >12 may</span>
+            <i class="fa fa-comments-o blk1 fl mrl10 " aria-hidden="true" style="font-size:30px;"></i>
+            <span class="blk1 fl font20 mrl10"> 2 comments</span>
+       </div> 
+  </div>
+
+</div>
+<div class="h50 w100 "></div>
+<!----------3----------->
+
+<div class="h500 w100 mrl70">
+
+  <div class="h500 w30 fl bs">
+    <div class="h250 w80 clw mt20 mrl40"><img src="48.jpg" class="h250 w100"></div>
+   <div class="h250 w100 ">
+     <center>
+       <h1 class="font20">Watch: the 3 best performances of<br> the 2018 VMAs</h1>
+       <button class="boxnew btn">#New</button>
+       <button class="boxsports blk4">#Sports</button>
+       <button class="boxtrending btn1">#Trending</button>
+     </center>
+     <p class="mrl60">Lorem Ipsum has been the industry's standard <br>dummy text ever since the 1500s, when an<br> unknown printer took a galley.</p>
+     <i class="fa fa-male blk1 fl mrl50 font30   " aria-hidden="true" ></i>
+            <span class="blk1 fl font20 mrl10 " >john doe</span>
+            <i class="fa fa-clock-o blk1 fl font30 mrl10" aria-hidden="true"></i>
+            <span class="blk1 fl font20 mrl10 "  >12 may</span>
+            <i class="fa fa-comments-o blk1 fl mrl10 " aria-hidden="true" style="font-size:30px;"></i>
+            <span class="blk1 fl font20 mrl10"> 2 comments</span>
+       </div> 
+     </div>
+  
+
+
+
+  <div class="h500 w30  fl bs">
+     <div class="h250 w80 clw mt20 mrl40"><img src="49.jpg" class="h250 w100"></div>
+      <div class="h250 w100 ">
+     <center>
+       <h1 class="font20">“Speaks perfect English”: Trump’s<br> offensive praise of a Patrol agent</h1>
+       <button class="boxnew btn">#New</button>
+       <button class="boxsports btn1">#Sports</button>
+       <button class="boxtrending blk4">#Trending</button>
+     </center>
+     <p class="mrl60">Lorem Ipsum has been the industry's standard <br>dummy text ever since the 1500s, when an<br> unknown printer took a galley.</p>
+     <i class="fa fa-male blk1 fl mrl50 font30   " aria-hidden="true" ></i>
+            <span class="blk1 fl font20 mrl10 " >john doe</span>
+            <i class="fa fa-clock-o blk1 fl font30 mrl10" aria-hidden="true"></i>
+            <span class="blk1 fl font20 mrl10 "  >12 may</span>
+            <i class="fa fa-comments-o blk1 fl mrl10 " aria-hidden="true" style="font-size:30px;"></i>
+            <span class="blk1 fl font20 mrl10"> 2 comments</span>
+       </div> 
+  </div>
+  
+  <div class="h500 w30  fl bs">
+     <div class="h250 w80 clw mt20 mrl40"><img src="50.jpg" class="h250 w100"></div>
+      <div class="h250 w100 ">
+     <center>
+       <h1 class="font20">Watch: the 3 best performances of<br> the 2018 VMAs</h1>
+       <button class="boxnew btn">#New</button>
+       <button class="boxsports blk4">#Sports</button>
+       <button class="boxtrending btn1">#Trending</button>
+     </center>
+     <p class="mrl60">Lorem Ipsum has been the industry's standard <br>dummy text ever since the 1500s, when an<br> unknown printer took a galley.</p>
+     <i class="fa fa-male blk1 fl mrl50 font30   " aria-hidden="true" ></i>
+            <span class="blk1 fl font20 mrl10 " >john doe</span>
+            <i class="fa fa-clock-o blk1 fl font30 mrl10" aria-hidden="true"></i>
+            <span class="blk1 fl font20 mrl10 "  >12 may</span>
+            <i class="fa fa-comments-o blk1 fl mrl10 " aria-hidden="true" style="font-size:30px;"></i>
+            <span class="blk1 fl font20 mrl10"> 2 comments</span>
+       </div> 
+  </div>
+
+</div>
+<div class="h50 w100 "></div>
+<div class="h50 w100 mb40 ">
+  <center>
+    <button class="h50 w5" style="background: #2e332d" >1</button>
+    <button class="pagebtn h50 w5">2</button>
+    <button class="pagebtn h50 w5">3</button>
+    <button class="pagebtn h50 w5">4</button>
+  </center>
+</div>
+<!-------------------4---find instagram -------->
+
+<div class="h800 w100 fl " style="background: url(2.png);background-size: cover;background-color: black;">
+   <center>
+      <h1 class="pclw font25">Find Us on Instagram<hr class="w20"></h1>
+   </center>
+   <div class="h200 w90 fl  mrl100">
+      <div class="h200 w15 clb fl" style="background-image: url(33.jpg);background-size: cover;"></div>
+      <div class="h200 w15 clb fl" style="background-image: url(34.jpg);background-size: cover;"></div>
+      <div class="h200 w15 clb fl" style="background-image: url(35.jpg);background-size: cover;"></div>
+      <div class="h200 w15 clb fl" style="background-image: url(36.jpg);background-size: cover;"></div>
+      <div class="h200 w15 clb fl" style="background-image: url(37.jpg);background-size: cover;"></div>
+      <div class="h200 w15 clb fl" style="background-image: url(38.jpg);background-size: cover;"></div>
+   </div>
+   <br>
+
+
+<div class="h500 w30 mt80 fl">
+
+    <h1 class=" font30 mt50 pclw" style="margin-left: 80px">NewMag</h1>
+    <hr class="w70">
+    <center>
+       <p class="font10 mrl20 pclw">amet, consetetur sadipscing elitr, sed diam nonumy<br> eirmod tempor invidunt ut labore et dolore magna<br> aliquyam erat.</p>
+       
+    </center>
+    <i class="fa fa-facebook-official fl font30 mrl80 mt30 pclw " aria-hidden="true"></i>
+    <i class="fa fa-twitter fl mrl20 font30 mt30 pclw" aria-hidden="true"></i>
+    <i class="fa fa-instagram fl mrl20 font30 mt30 pclw" aria-hidden="true"></i>
+
+   </div>
+
+
+
+<div class="h500 w20  fl">
+   <h1 class="mrl30 mt50 pclw">Categories</h1>
+   <hr class="w90">
+   <span class="mrl20 pclw">Entertainment</span>
+   <br><br>
+   <span class="mrl20 pclw">Sports</span>
+   <br><br>
+   <span class="mrl20 pclw">Polictics</span>
+   <br><br>
+   <span class="mrl20 pclw">National</span>
+   <br><br>
+   <span class="mrl20 pclw">Blog</span>
+   <br><br>
+
+ </div>
+
+<div class="h500 w20  fl">
+   <h1 class="mrl30 mt50 pclw">Popular Tags</h1>
+   <hr class="w90">
+    <span class="mrl20 pclw">Entertainment</span>
+   <br><br>
+   <span class="mrl20 pclw">Sports</span>
+   <br><br>
+   <span class="mrl20 pclw">Polictics</span>
+   <br><br>
+   <span class="mrl20 pclw">National</span>
+   <br><br>
+   <span class="mrl20 pclw">Blog</span>
+   <br><br>
+</div>
+
+
+
+<div class="h500 w30  fl">
+   <h1 class="mrl30 mt50 pclw">Newsletter</h1>
+   <hr class="w90">
+   <span class="mrl20 pclw">Dont Miss Anything</span>
+   <br><br>
+    <span class="mrl20 pclw">Subscribe to our #newsletter</span>
+   <br><br>
+   <form>
+      <input class="h25 w70 mrl20 fl" type="text" placeholder="Enter Email">
+      <button style="background:red;border:none;color: white;"><i class="fa fa-paper-plane font25" aria-hidden="true"></i></button>
+
+   </form>
+</div>
+
+
+</div>
+</div>
+
+<script>
+var myVar;
+
+function myFunction() {
+  myVar = setTimeout(showPage, 3000);
+}
+
+function showPage() {
+  document.getElementById("loader").style.display = "none";
+  document.getElementById("myDiv").style.display = "block";
+}
+</script>
+
+</body>
+</html>
+
+
+</body>
+</html>

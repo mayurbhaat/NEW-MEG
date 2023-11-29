@@ -1,0 +1,1328 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <style type="text/css">
+      /* Center the loader */
+      .loader {
+  perspective: 600px;
+  width: 100px;
+  height: 100px;
+}
+
+.cube {
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  animation: rotate 4s linear infinite;
+}
+
+.face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0.8;
+  border: 0.5px solid #fff;
+}
+
+.face:nth-child(1) {
+  transform: rotateX(90deg) translateZ(50px);
+}
+
+.face:nth-child(2) {
+  transform: rotateX(-90deg) translateZ(50px);
+}
+
+.face:nth-child(3) {
+  transform: translateZ(50px);
+}
+
+.face:nth-child(4) {
+  transform: rotateY(90deg) translateZ(50px);
+}
+
+.face:nth-child(5) {
+  transform: rotateY(-90deg) translateZ(50px);
+}
+
+.face:nth-child(6) {
+  transform: rotateY(180deg) translateZ(50px);
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotateX(0deg) rotateY(0deg);
+  }
+
+  100% {
+    transform: rotateX(360deg) rotateY(360deg);
+  }
+}
+
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Add animation to "page content" */
+.animate-bottom {
+  position: relative;
+  -webkit-animation-name: animatebottom;
+  -webkit-animation-duration: 1s;
+  animation-name: animatebottom;
+  animation-duration: 1s
+}
+
+@-webkit-keyframes animatebottom {
+  from { bottom:-100px; opacity:0 } 
+  to { bottom:0px; opacity:1 }
+}
+
+@keyframes animatebottom { 
+  from{ bottom:-100px; opacity:0 } 
+  to{ bottom:0; opacity:1 }
+}
+
+#myDiv {
+  display: none;
+  text-align: center;
+}
+
+.my{
+   background-color: black;height: 775px;width: 100%;
+}
+
+ 
+ .blk{color: white;}  	
+.blk:hover{color: red}
+
+.blk1{color: black;}
+.blk1:hover{color: red;}
+
+.blk3{color: white;}
+.blk3:hover{color: #2c3847}
+
+.blk4{background: green;}
+.blk4:hover{background: #2c3847}
+
+.pbtn{color: white;}
+.pbtn:hover{color:#2c3847;}
+
+
+.btn{background: #256da1;}
+.btn:hover{background: #253140}
+
+.btn1{background: #912372;}
+.btn1:hover{background: #253140}
+
+.btn2{background:white;}
+.btn2:hover{background:#253140} }
+
+.img{height:400px;width:50%;background-size:110% 110%;transition: 2s; }
+.img:hover{background-size: 100% 100%;transition: 2s;}
+
+.sh{height: 100%;width: 100%;background:#0000007a}
+.sh:hover{height: 100%;width: 100%;background: #21216a4d;}
+
+.img2{height:400px;width:90%;background-size: 110% 110%;transition: 2s}
+.img2:hover{background-size: 100% 100%;transition: 2s}
+
+.s{background: #00000036;}
+
+
+.img3{height: 400px;width: 90%;background-size: 110% 110%;transition: 2s}
+.img3:hover{background-size: 100% 100%;transition: 2s}
+
+
+
+.zoom{height: 250px;width: 30%;background-size: 100% 100%;transition: 2s}
+.zoom:hover{background-size: 110% 110%;transition: 2s}
+
+.font20{font-size:20px}
+.font25{font-size:25px}
+.font30{font-size:30px}
+
+.h20{height: 20px}
+.h25{height: 25px}
+.h150{height: 150px}
+.h200{height: 200px}
+.h400{height: 400px}
+.h500{height: 500px}
+.h600{height: 600px}
+.h700{height: 700px}
+
+
+
+.h300{height: 300px}
+.h200{height: 200px}
+.h250{height: 250px}
+.h100{height: 100px}
+.w100{width: 100%}
+.w30{width: 30%}
+.w40{width: 40%}
+.w50{width: 50%}
+.w90{width: 90%}
+
+.w70{width: 70%}
+.w80{width: 80%}
+.w85{width: 85%}
+.w48{width: 48%}
+.w5{width: 5%}
+.w10{width: 10%}
+.w15{width: 15%}
+
+
+
+
+
+
+
+.fl{float: left;}
+.mt10{margin-top: 10px;}
+.mt20{margin-top: 20px}
+.mt30{margin-top: 30px}
+.mt40{margin-top: 40px}
+.mt50{margin-top: 50px}
+
+
+.pclw{color: white;}
+
+
+
+
+
+
+
+
+
+.mb10{margin-bottom: 10px}
+.mb20{margin-bottom: 20px}
+.mb30{margin-bottom: 30px}
+.mb40{margin-bottom: 40px}
+.mb50{margin-bottom: 50px}
+.mb60{margin-bottom: 60px}
+.mb70{margin-bottom: 70px}
+.mb80{margin-bottom: 80px}
+.mb90{margin-bottom: 90px}
+.mb100{margin-bottom: 100px}
+
+
+.mr10{margin-right: 10px}
+.mr50{margin-right: 50px}
+.mr80{margin-right: 80px}
+.mr90{margin-right: 90px}
+.mr100{margin-right: 100px}
+
+
+
+
+
+
+
+
+
+.mrl10{margin-left: 10px}
+.mrl20{margin-left: 20px}
+.mrl30{margin-left: 30px}
+.mrl40{margin-left: 40px}
+.mrl50{margin-left: 50px}
+.mrl60{margin-left: 60px}
+.mrl70{margin-left: 70px}
+.mrl80{margin-left: 80px}
+.mrl90{margin-left: 90px}
+.mrl100{margin-left: 100px}
+
+
+
+.hr3{color:white;}
+.hr3:hover{color:#f75656 ;}
+
+
+
+.clg{background: gold;}
+.clgn{background: green;}
+.clw{background: white;}
+.clb{background: black;}
+.clbe{background: blue;}
+
+
+.w45{width: 45%}
+.w20{width: 20%}
+.mglt{margin-left: 10px}
+
+
+.boxnew{height:35px;width:18%;border: azure;color: white;}
+.boxhealth{height:35px;width:20%;border: azure;color: white;} 
+.boxFashion{height:35px;width:25%;border: azure;color: white;} 
+.boxmusic{height:35px;width:20%;border: azure;color: white;} 
+.boxsports{height:35px;width:20%;border: azure;color: white;} 
+.boxtrending{height:35px;width:25%;border: azure;color: white;} 
+
+
+
+
+
+.Buynew{height:40px;width:10%;color: red;} 
+.Buynew:hover{height:40px;width:10%;background: #f75656;color: white;}
+
+.bbox{height: 100%;width: 100%;background: linear-gradient(to top, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 10%, rgba(0, 0, 0, 0) 70%, rgba(0, 0, 0, 0) 100%);}
+</style>
+
+
+</head>
+<body>
+
+   <body onload="myFunction()" style="margin:0;">
+
+      <div id="loader">
+         <div class="my">
+         <div class="loader" style="margin-left: 550px;margin-top: 350px;float: left;height: 100px;width: 20%;">
+            <div class="cube">
+                <div class="face"></div>
+                <div class="face"></div>
+                <div class="face"></div>
+                <div class="face"></div>
+                <div class="face"></div>
+                <div class="face"></div>
+            </div>
+        </div>
+      </div>
+      </div>
+      
+      <div style="display:none;" id="myDiv" class="animate-bottom">
+
+
+
+
+
+
+
+
+ <div style="height: 800px;width: 100%;">
+   	<div style="height:50px;width: 100%;background: #464c4f;">
+   		<i class="fa fa-clock-o" aria-hidden="true" style="color: white;font-size: 20px;margin: 15px 0px 0px 150px;"></i>
+   		<span style="color:white;">2023-09-19</span>
+   		<i class="fa fa-bolt" aria-hidden="true" style="color:white;font-size: 20px;margin: 0px 0px 0px 10px;"></i>
+   		<span style="color:white;">bapunager,ahmedbad</span>
+   		<i class="fa fa-facebook blk " aria-hidden="true" style="font-size: 20px;margin: 0px 0px 0px 750px;"></i>
+   		<i class="fa fa-twitter blk" aria-hidden="true" style="font-size: 20px;margin: 0px 0px 0px 10px;"></i>
+   		<i class="fa fa-instagram blk" aria-hidden="true" style="font-size:20px;margin:0px 0px 0px 10px"></i>
+   	</div>
+
+   	<div style="height:100px;width:100%;float: left;">
+   		<img src="1.png" style="height:100px;width:11%;margin:0px 0px 0px 170px;float: left;">
+   	<a href="index.html">	<span class="blk1" style="font-size:20px;margin:40px 0px 100px 100px;float: left;">HOME</span></a>
+   	<a href="Blog.html"><span class="blk1" style="font-size:20px;margin:40px 0px 0px 10px;float: left;">BLOG</span></a>  
+   	<a href="SHOPLIST.html"><span class="blk1" style="font-size: 20px;margin: 40px 0px 0px 10px;float: left;">SHOP LIST</span></a>
+
+   	<a href="ACCOUNT.html">	<span class="blk1" style="font-size: 20px;margin: 40px 0px 0px 10px;float: left;">ACCOUNT</span></a>
+   	<a href="CART.html">	<span class="blk1" style="font-size: 20px;margin: 40px 0px 0px 10px;float: left;">CART</span></a>
+      <a href="CHECKOUT.html"><span class="blk1" style="font-size: 20px;margin: 40px 0px 0px 10px;float: left;">CHECKOUT</span></a>
+   		<span class="blk1" style="font-size: 20px;margin: 40px 0px 0px 10px;float: left;">DETAIL</span>
+      <a href="ABOUT US.html"><span class="blk1" style="font-size: 20px;margin: 40px 0px 0px 10px;float: left;">ABOUT US</span></a>
+        <a href="CONTACT US.html"><span class="blk1" style="font-size: 20px;margin: 40px 0px 0px 10px;float: left;">CONTACT US</span></a>
+        <i class="fa fa-search blk1" aria-hidden="true" style="margin: 40px 0px 0px 30px;"></i>
+       </div>
+
+  <div style="height:600px;width:60%;background:gold;float: left;background-image: url(1.jpg);background-position: center;background-size: cover;">
+         <button class="btn" style="height:30px;width: 10%;margin: 480px 0px 0px 350px;border:azure;color: white;">#New</button> 
+         <button class="btn1" style="height:30px;width: 10%;margin: 0px 0px 0px 0px;border:azure;color: white;">#Health</button>
+         <p class="blk3" style="margin: 0px 0px 0px 250px;font-size:25px">DISCOVER YOUR TRUE HEALTH</p>
+         <i class="fa fa-male blk3" aria-hidden="true" style="font-size:30px;margin-left: 270px;margin-top: 15px;float: left;"></i>
+         <h3 class="blk3" style="float: left;margin: 20px 0px 0px 15px;">john doe</h3>
+         <i class="fa fa-clock-o blk3" aria-hidden="true" style="font-size:30px;margin:15px 50px 0px 10px;float:left;"></i>
+         <h3 class="blk3"   style="font-size:20px;margin: 20px 0px 0px -40px;float: left;">12 may</h3>
+         <i class="fa fa-comments-o blk3" aria-hidden="true" style="font-size:30px;float:left;margin: 15px 0px 0px 15px;"></i>
+         <p class="blk3" style="float: left;margin: 25px 0px 0px 10px;"> 5 comments</p>
+      </div>
+
+<!--------------1------------>
+
+
+
+
+  <div style="height:300px;width:40%;background:red;float: left;background-image: url(2.jpg);background-position: center;background-size: cover;">
+     <button class="btn"  style="height:40px;width: 20%;margin: 175px 0px 0px 175px;float: left;border: azure;color: white;">#Entertainment</button>
+     <button class="blk4" style="height:40px;width:15%;margin:175px 0px 0px 10px;float:left;border: azure;color: white;">#Health</button>
+     <h2 class="blk3" style="margin:10px 0px 0px 115px;float:left;font-size: 30px;">TOP 10 Dancer you should </h2>
+     <i class="fa fa-male blk3" aria-hidden="true" style="font-size:30px;float:left;margin: 40px 0px 0px -300px;"></i>
+     <h3 class="blk3" style="margin:5px 0px 0px 190px;float: left;font-size: 15px;">Micheal jackson </h3>
+     <i class="fa fa-clock-o blk3" aria-hidden="true" style="font-size:20px;float: left;margin: 5px 0px 0px 10px;"></i>
+     <h3 class="blk3" style="font-size:20px;float:left;margin: 0px 0px 220px 10px;">july</h3>
+     <i class="fa fa-comments blk3" aria-hidden="true" style="float:left;margin: 5px 0px 0px 20px;font-size: 20px;"></i>
+     <h3 class="blk3" style="float:left;margin: 5px 0px 0px 10px;font-size: 20px;">5 Comments</h3>
+
+  </div>
+<!--------------2----------->
+
+    
+    <div style="height:300px;width:40%;background:green;float: left;background-image:url(3.jpg) ;background-position: center;background-size: cover;">
+      <button  class="blk4" style="height:40px;width:15%;margin:170px 0px 0px 190px;border: azure;float: left;color: white;">#Religion</button>
+      <button  class="btn1" style="height:40px;width:15%;margin:170px 0px 0px 10px;float: left;border: azure;color: white;">#New</button>
+      <h2 class="blk3" style="margin:10px 0px 0px 130px;float:left;font-size: 30px;">What did Buddha tech? </h2>
+       <i class="fa fa-male blk3" aria-hidden="true" style="font-size:30px;margin: 50px 0px 0px -280px;float: left;"></i>
+       <h3 class="blk3" style="margin:20px 0px 0px 180px;float: left;font-size: 15px;">Tom Richardson </h3>
+       <i class="fa fa-clock-o blk3" aria-hidden="true" style="font-size:20px;float: left;margin: 20px 0px 0px 10px;"></i>
+       <h3 class="blk3" style="font-size:15px;float:left;margin: 22px 0px 0px 5px;">12 june</h3>
+       <i class="fa fa-comments blk3" aria-hidden="true" style="float:left;margin: 20px 0px 0px 10px;font-size: 20px;"></i>
+       <h3 class="blk3" style="float:left;margin: 22px 0px 0px 10px;font-size: 15px;">5 Comments</h3>
+      </div>
+    
+    </div>
+
+ <!---------------3----------> 
+ <!--------------second---------> 
+
+ <div style="height:800px;width:100%;">
+    <div style="height:50px;width:85%;background:red;float:left;margin: 20px 0px 0px 100px;border-radius: 1px ;">
+       <div style="height:50px;width:20%;background:red;float: left;">
+          <h3 style="color:white;font-size: 30px;margin: 5px 0px 10px 15px;">Breaking News</h3>
+       </div>
+
+       <div style="height:50px;width:79.8%;background:white;float: left;border: 1px solid black;">
+       <marquee  style="margin: 15px 0px 0px 0px;font-size: 20px;"> 1.“Speaks perfect English”: Trump’s offensive praise of a Latino Border Patrol agent. 2.Watch J. Lo live her best life, Nicki Minaj go regal, and Ariana Grande go religious.3.Tesla fans have found a new person to blame for Elon Musk’s troubles: his girlfriend. 4.The Pentagon won’t check if US bombs killed kids in Yemen. CNN did it for them.</marquee>
+       </div>
+      
+
+      <div style="height:700px;width:100%;float: left;">
+         <h2 style="margin: 60px 0px 0px 0px;">Top Trading<hr></h2>
+         <div class="img2" style="height:400px;width:50%;margin: 40px 0px 0px 0px ;float: left;background-image: url(4.jpg);background-position:center;">
+            <div class="sh">
+            <div  style="height:200px;width:100%;"></div>
+            <div  style="height:200px;width:100%;background:">
+            <h3 style="font-size: 25px;color: white;margin: 30px 0px 0px 50px;">Creativity comes within itself for everyone</h3>
+            <button  class="btn" style="height:40px;width:15%;margin:0px 0px 0px 150px;border: azure;color: white;float: left;">#New</button>
+            <button  class="blk4" style="height:40px;width:15%;margin:0px 0px 0px 10px;border: azure;color: white;">#Education</button>
+            <button  class="btn1" style="height:40px;width:15%;margin:0px 0px 0px 10px;border: azure;color: white;">#Children</button>
+            <p style="font-size:20px;color:white;margin: 0px 0px 0px 40px;float: left;">Lorem Ipsum has been the industry's standard dummy text ever since<br> the 1500s, when an unknown printer took a galley.</p>
+            <i class="fa fa-male blk3" aria-hidden="true" style="font-size:30px;margin: 10px 0px 0px 190px;float: left;"></i>
+            <h3 class="blk3" style="float: left;margin: 15px 0px 0px 10px;">john doe</h3>
+            <i class="fa fa-clock-o blk3" aria-hidden="true" style="font-size:30px;margin:10px 0px 0px 10px;float:left;"></i>
+            <h3 class="blk3"   style="margin: 15px 0px 0px 10px;float: left;">12 may</h3>
+            <i class="fa fa-comments-o blk3" aria-hidden="true" style="font-size:30px;float:left;margin: 15px 0px 0px 15px;"></i>
+            <p class="blk3" style="float: left;margin: 20px 0px 0px 10px;"> 2 comments</p>
+            </div>
+              </div>
+            </div>
+
+<!------------------2---------->
+      
+
+         <div class="bbox" style="height:400px;width:20%;background:green;;float: left;margin:40px 0px 0px 30px;background-image: url(5.jpg);position: center;background-size: cover;">
+            <div class="bbox fl">
+            <h3 style="color: white;font-size:20px;margin: 280px 0px 0px 15px;">Traffic,A Big Problem<hr style="width:90%;margin:10px 0px 0px 0px"></h3>
+             <i class="fa fa-male blk3" aria-hidden="true" style="font-size:20px;margin: 10px 0px 0px 20px;float: left;"></i>
+            <h3 class="blk3" style="float: left;margin: 10px 0px 0px 10px;">john doe</h3>
+             <i class="fa fa-clock-o blk3" aria-hidden="true" style="font-size:20px;margin:10px 0px 0px 10px;float:left;"></i>
+            <h3 class="blk3"   style="margin: 10px 0px 0px 10px;float: left;">12 may</h3>
+            <button  class="btn" style="height:40px;width:25%;margin:0px 0px 0px 40px;border: azure;color: white;float: left;">#New</button>
+            <button  class="btn1" style="height:40px;width:35%;margin:0px 0px 0px 10px;border: azure;color: white;">#Political</button>
+            <
+
+
+
+         </div>
+
+
+
+
+
+
+         <div  style="height:400px;width:20%;background:black;;float: left;margin:40px 0px 0px 20px;background-image: url(6.jpg);position: center;background-size: cover;">
+            <div class="bbox fl">
+            <h3 style="color:white;font-size: 20px;margin: 280px 0px 0px 15px ;">Best Gadgets in town<hr style="width:90%;margin:10px 0px 0px 0px"></h3>
+            <i class="fa fa-male blk3" aria-hidden="true" style="font-size:20px;margin: 10px 0px 0px 20px;float: left;color: white;"></i>
+            <h3 class="blk3" style="float: left;margin: 10px 0px 0px 10px;color: white;">Mr.Gadget</h3>
+            <i class="fa fa-clock-o blk3" aria-hidden="true" style="font-size:20px;margin:10px 0px 0px 5px;float:left;color: white;"></i>
+            <h3 class="blk3"   style="margin: 10px 0px 0px 5px;float: left;color: white;">12 April</h3>
+            <button  class="btn" style="height:40px;width:25%;margin:0px 0px 0px 50px;border: azure;color: white;float: left;">#New</button>
+             <button  class="blk4" style="height:40px;width:35%;margin:0px 0px 0px 10px;border: azure;color: white;">#Health</button>
+             </div>
+         </div>
+        <div  style="height:100px;width:80%;float: left;margin: 40px 0px 0px 70px;">
+           <img src="7.jpg" style="height:100px;width: 100%;">
+        </div> 
+        </div>
+        </div>
+        </div>
+
+ <!------------three-------->
+   <div style="height:500px;width:100%;float: left;">
+      <div style="height:100px;width:100%;">
+      <h3 style="font-size: 30px;margin: 5px 0px 0px 90px;">Latest Post<hr style="width:90%;margin: 0px 0px 0px 0px;"></h3></div>
+
+
+       <div style="height:500px;width:50%;float: left;">
+          <div class="img2" style="height:400px;width:90%;margin: 0px 0px 0px 60px;background-image: url(8.jpg);background-position: center;">
+            <div class="mt100" style="height:200px;width:100%;background:#00000057;margin:200px 0px 0px 0px;float:left;">
+            <h3 style="font-size:25px;color:white;margin: 10px 0px 0px 70px;">New Genration of People loving food</h3>
+            <button  class="btn" style="height:35px;width:10%;margin:0px 0px 0px 120px;border: azure;color: white;float: left;">#New</button>
+            <button  class="blk4" style="height:35px;width:15%;margin:0px 0px 0px 5px;border: azure;color: white;">#Sports</button>
+             <button  class="btn1" style="height:35px;width:15%;margin:0px 0px 0px 5px;border: azure;color: white;">#Trading</button>
+             <p style="font-size:20px;color:white;margin: 10px 0px 0px 40px;">Lorem Ipsum has been the industry's standard dummy text ever since<br> the 1500s, when an unknown printer took a galley.</p>
+             <i class="fa fa-male blk3" aria-hidden="true" style="font-size:30px;margin: 30px 0px 0px 80px;float: left;"></i>
+            <h3 class="blk3" style="float: left;margin: 30px 0px 0px 10px;">john doe</h3>
+            <i class="fa fa-clock-o blk3" aria-hidden="true" style="font-size:30px;margin:30px 0px 0px 10px;float:left;"></i>
+            <h3 class="blk3"   style="margin: 30px 0px 0px 10px;float: left;">12 may</h3>
+            <i class="fa fa-comments-o blk3" aria-hidden="true" style="font-size:30px;float:left;margin: 25px 0px 0px 10px;"></i>
+            <p class="blk3" style="float: left;margin: 35px 0px 0px 10px;"> 2 comments</p>
+
+             </div>
+          </div>
+          </div>
+       
+
+
+
+
+         <div style="height:500px;width:50%;float: left;">
+            <div class="img2" style="height:400px;width:90%;margin: 0px 0px 0px 10px;background-image: url(9.jpg);background-position: center;">
+                <div style="height:200px;width:100%;background:#00000057;margin:200px 0px 0px 0px;float:left;">
+                <h3 style="font-size:25px;color:white;margin: 10px 0px 0px 30px;">2018's most fascinating Governor's Election,explained</h3>
+                <button  class="btn" style="height:35px;width:10%;margin:0px 0px 0px 180px;border: azure;color: white;float: left;">#New</button>
+                <button  class="blk4" style="height:35px;width:15%;margin:0px 0px 0px 5px;border: azure;color: white;">#Security</button>
+                <button  class="btn1" style="height:35px;width:15%;margin:0px 0px 0px 5px;border: azure;color: white;">#Politics</button>
+                 <p style="font-size:20px;color:white;margin: 10px 0px 0px 40px;">Lorem Ipsum has been the industry's standard dummy text ever since<br> the 1500s, when an unknown printer took a galley.</p>
+             <i class="fa fa-male blk3" aria-hidden="true" style="font-size:30px;margin: 30px 0px 0px 150px;float: left;"></i>
+            <h3 class="blk3" style="float: left;margin: 30px 0px 0px 10px;">john doe</h3>
+            <i class="fa fa-clock-o blk3" aria-hidden="true" style="font-size:30px;margin:30px 0px 0px 10px;float:left;"></i>
+            <h3 class="blk3"   style="margin: 30px 0px 0px 10px;float: left;">12 may</h3>
+            <i class="fa fa-comments-o blk3" aria-hidden="true" style="font-size:30px;float:left;margin: 25px 0px 0px 10px;"></i>
+            <p class="blk3" style="float: left;margin: 35px 0px 0px 10px;"> 2 comments</p>
+   
+
+         </div>
+         </div>
+         </div>
+    </div>
+
+
+
+
+
+
+ </div>         
+
+
+
+<div class="h600 w100 fl " > 
+
+
+
+<div class="h600 w45 fl " style="margin-left: 60px;"> 
+   <div class="h150 w30 fl mt20 " > <img class="h150 w100" src="10.jpg"> </div>
+   <div class="h150 w70 fl mt20 " ><p class="font20 mglt">Watch: the 3 best performances of the 2018 VMAs</p>
+     <i class="fa fa-male blk3" aria-hidden="true" style="font-size:30px;margin: 0px 0px 0px 10px;float: left;"></i>
+            <h3 class="blk3" style="float: left;margin: 0px 0px 0px 10px;">john doe</h3>
+            <i class="fa fa-clock-o blk3" aria-hidden="true" style="font-size:30px;margin:0px 0px 0px 10px;float:left;"></i>
+            <h3 class="blk3"   style="margin: 0px 0px 0px 10px;float: left;">12 may</h3>
+            <i class="fa fa-comments-o blk3" aria-hidden="true" style="font-size:30px;float:left;margin: -5px 0px 0px 10px;"></i>
+            <p class="blk3" style="float: left;margin: 5px 0px 0px 10px;"> 2 comments</p>
+            <button class="boxnew btn" style="margin:40px 0px 0px -330px">#New</button>
+            <button class="boxhealth blk4">#Health</button>
+
+    </div>
+    <hr class="w100" style="margin-top: 10px;float: left;" >
+
+
+<div class="h150 w30 fl  mt20" ><img class="h150 w100" src="11.jpg"> </div>
+   <div class="h150 w70 fl mt20 " ><p class="font20 mglt">Music bringing people together everywhere</p>
+     <i class="fa fa-male blk3" aria-hidden="true" style="font-size:30px;margin: 0px 0px 0px 10px;float: left;"></i>
+            <h3 class="blk3" style="float: left;margin: 0px 0px 0px 10px;">john doe</h3>
+            <i class="fa fa-clock-o blk3" aria-hidden="true" style="font-size:30px;margin:0px 0px 0px 10px;float:left;"></i>
+            <h3 class="blk3"   style="margin: 0px 0px 0px 10px;float: left;">12 may</h3>
+            <i class="fa fa-comments-o blk3" aria-hidden="true" style="font-size:30px;float:left;margin: -5px 0px 0px 10px;"></i>
+            <p class="blk3" style="float: left;margin: 5px 0px 0px 10px;"> 2 comments</p>
+            <button class="boxnew btn" style="margin:40px 0px 0px -330px">#New</button>
+            <button class="boxhealth btn1">#Health</button>
+          </div>
+           <hr class="w100" style="margin-top: 10px;float: left;" >
+
+<div class="h150 w30 fl mt20 " ><img class="h150 w100" src="12.jpg"> </div>
+   <div class="h150 w70 fl mt20 " ><p class="font20 mglt">“Speaks perfect English”: Trump’s offensive praise of a Latino Border Patrol agent</p>
+    <i class="fa fa-male blk3" aria-hidden="true" style="font-size:30px;margin: 0px 0px 0px 10px;float: left;"></i>
+            <h3 class="blk3" style="float: left;margin: 0px 0px 0px 10px;">john doe</h3>
+            <i class="fa fa-clock-o blk3" aria-hidden="true" style="font-size:30px;margin:0px 0px 0px 10px;float:left;"></i>
+            <h3 class="blk3"   style="margin: 0px 0px 0px 10px;float: left;">12 may</h3>
+            <i class="fa fa-comments-o blk3" aria-hidden="true" style="font-size:30px;float:left;margin: -5px 0px 0px 10px;"></i>
+            <p class="blk3" style="float: left;margin: 5px 0px 0px 10px;"> 2 comments</p>
+            <button class="boxnew btn" style="margin:30px 0px 0px -330px">#New</button>
+            <button class="boxhealth blk4">#Health</button>
+             </div>
+
+           </div>
+           
+
+
+
+<div class="h600 w45 fl " style="margin-left:20px"> 
+  <div class="h150 w30 fl  mt20" ><img class="h150 w100" src="13.jpg"> </div>
+   <div class="h150 w70 fl mt20 "><p class="font20 mglt" style="margin-top: 10px;">7 reasons Hollywood doesn’t make romantic comedies anymore</p>
+     <i class="fa fa-male blk3" aria-hidden="true" style="font-size:30px;margin: -10px 0px 10px 10px;float: left;"></i>
+            <h3 class="blk3" style="float: left;margin: -10px 0px 0px 10px;">john doe</h3>
+            <i class="fa fa-clock-o blk3" aria-hidden="true" style="font-size:30px;margin:-10px 0px 0px 10px;float:left;"></i>
+            <h3 class="blk3"   style="margin: -10px 0px 0px 10px;float: left;">12 may</h3>
+            <i class="fa fa-comments-o blk3" aria-hidden="true" style="font-size:30px;float:left;margin: -10px 0px 0px 10px;"></i>
+            <p class="blk3" style="float: left;margin: -5px 0px 0px 10px;"> 2 comments</p>
+            <button class="boxnew btn1" style="margin:30px 0px 0px -330px">#New</button>
+            <button class="boxhealth blk4">#sports</button>
+           </div>
+            <hr class="w100" style="margin-top: 10px;float: left;" >
+
+   <div class="h150 w30 fl  mt20"><img class="h150 w100" src="14.jpg"> </div>
+   <div class="h150 w70 fl mt20 "><p class="font20 mglt">Must have gadgets in this century</p>
+    <i class="fa fa-male blk3" aria-hidden="true" style="font-size:30px;margin: 0px 0px 0px 10px;float: left;"></i>
+            <h3 class="blk3" style="float: left;margin: 0px 0px 0px 10px;">john doe</h3>
+            <i class="fa fa-clock-o blk3" aria-hidden="true" style="font-size:30px;margin:0px 0px 0px 10px;float:left;"></i>
+            <h3 class="blk3"   style="margin: 0px 0px 0px 10px;float: left;">12 may</h3>
+            <i class="fa fa-comments-o blk3" aria-hidden="true" style="font-size:30px;float:left;margin: -5px 0px 0px 10px;"></i>
+            <p class="blk3" style="float: left;margin: 5px 0px 0px 10px;"> 2 comments</p>
+            <button class="boxnew btn" style="margin:40px 0px 0px -330px">#New</button>
+            <button class="boxhealth btn1">#Health</button>
+            </div>
+          <hr class="w100" style="margin-top: 10px;float: left;" >
+
+
+
+
+<div class="h200 w30 fl mt20 "><img class="h150 w100" src="15.jpg"> </div>
+   <div class="h200 w70 fl mt20 " ><p class="font20 mglt">Why conservatives love to hate Alexandria Ocasio-Cortez</p> 
+        <i class="fa fa-male blk3" aria-hidden="true" style="font-size:30px;margin: 0px 0px 0px 10px;float: left;"></i>
+            <h3 class="blk3" style="float: left;margin: 0px 0px 0px 10px;">john doe</h3>
+            <i class="fa fa-clock-o blk3" aria-hidden="true" style="font-size:30px;margin:0px 0px 0px 10px;float:left;"></i>
+            <h3 class="blk3"   style="margin: 0px 0px 0px 10px;float: left;">12 may</h3>
+            <i class="fa fa-comments-o blk3" aria-hidden="true" style="font-size:30px;float:left;margin: -5px 0px 0px 10px;"></i>
+            <p class="blk3" style="float: left;margin: 5px 0px 0px 10px;"> 2 comments</p>
+            <button class="boxnew btn" style="margin:40px 0px 0px -330px">#New</button>
+            <button class="boxhealth blk4">#Health</button>
+         </div>
+         </div>
+
+     </div>
+
+  <!-----------both side images text line over--------------->  
+  
+  <div style="height: 350px;width: 100%;background: gold;float: left;background-image: url(16.jpg);background-position: center;background-size: cover;background-attachment: fixed;">
+      <h1 style="font-size:50px;color: white;"><center>Build your dream magazine now</h1>
+      <h3 style="font-size:20px;;color: white;"><center>Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing <br> layouts and visual mockups. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor <br> incididunt ut labore et dolore magna aliqua.</h3>
+         <button class="Buynew" style="height:40px;width:10%;float:left;border: 1px solid white ;border-radius: 30px;margin: 20px 0px 0px 600px;"><center>Buy Now</button>
+  </center></div> 
+
+
+
+<!-------------four------------>
+
+<div class="h600 w100  fl ">
+<div class="h100 w100 clw fl ">
+   <h1 style="margin:60px 0px 0px 100px">Most Viewed</h1>
+    </div>
+    <hr style="width: 83%;height:2px;background: black;margin-left: 90px;">
+
+
+<div class="h500 w100 fl ">
+   <div class="h400 w20 clw fl mrl10" style="margin-top: 20px; margin-left: 100px;background-image: url(17.jpg);background-size: cover;">
+      <div class="bbox fl">
+      <h3 class="hr3" style="font-size:20px;margin: 270px 0px 0px 40px;">Technology and Music</h3>
+      <hr class="w70 clb">
+      <i class="fa fa-male blk3" aria-hidden="true" style="font-size:30px;margin: 0px 0px 0px 30px;float: left;"></i>
+       <h3 class="blk3" style="float: left;margin: 0px 0px 0px 10px;">john doe</h3>
+       <i class="fa fa-clock-o blk3" aria-hidden="true" style="font-size:30px;margin:0px 0px 0px 10px;float:left;"></i>
+      <h3 class="blk3"   style="margin: 0px 0px 0px 10px;float: left;">12 may</h3>
+      <button class="boxnew btn" style="margin:20px 0px 0px 80px">#New</button>
+      <button class="boxhealth btn1">#Health</button>
+   </div></div>
+
+
+
+
+
+
+
+
+   <div class="h400 w20 clw fl mrl10 " style="margin-top: 20px;background-image: url(18.jpg);background-size: cover;">
+      <div class="bbox fl">
+      <h3 class="hr3" style="font-size:20px;margin: 270px 0px 0px 40px;">Raising a child</h3>
+      <hr class="w70 clb">
+      <i class="fa fa-male blk3" aria-hidden="true" style="font-size:30px;margin: 0px 0px 0px 30px;float: left;"></i>
+       <h3 class="blk3" style="float: left;margin: 0px 0px 0px 10px;">john doe</h3>
+       <i class="fa fa-clock-o blk3" aria-hidden="true" style="font-size:30px;margin:0px 0px 0px 10px;float:left;"></i>
+      <h3 class="blk3"   style="margin: 0px 0px 0px 10px;float: left;">12 may</h3>
+      <button class="boxnew btn" style="margin:20px 0px 0px 80px">#New</button>
+      <button class="boxhealth blk4">#Health</button>
+   </div></div>
+
+
+
+
+
+   <div class="h400 w20 clw fl mrl10 " style="margin-top: 20px;background-image: url(19.jpg);background-size: cover;">
+      <div class="bbox fl">
+      <h3 class="hr3" style="font-size:20px;margin: 270px 0px 0px 40px;">Traveling</h3>
+      <hr class="w70 clb">
+      <i class="fa fa-male blk3" aria-hidden="true" style="font-size:30px;margin: 0px 0px 0px 30px;float: left;"></i>
+       <h3 class="blk3" style="float: left;margin: 0px 0px 0px 10px;">john doe</h3>
+       <i class="fa fa-clock-o blk3" aria-hidden="true" style="font-size:30px;margin:0px 0px 0px 10px;float:left;"></i>
+      <h3 class="blk3"   style="margin: 0px 0px 0px 10px;float: left;">12 may</h3>
+      <button class="boxnew btn1" style="margin:20px 0px 0px 80px">#New</button>
+      <button class="boxhealth blk4">#Health</button>
+   </div></div>
+
+
+   <div class="h400 w20 clw fl mrl10 " style="margin-top: 20px;background-image: url(20.jpg);background-size: cover;">
+      <div class="bbox fl">
+       <h3 class="hr3" style="font-size:20px;margin: 270px 0px 0px 40px;">Raising a child</h3>
+      <hr class="w70 clb">
+      <i class="fa fa-male blk3" aria-hidden="true" style="font-size:30px;margin: 0px 0px 0px 30px;float: left;"></i>
+       <h3 class="blk3" style="float: left;margin: 0px 0px 0px 10px;">john doe</h3>
+       <i class="fa fa-clock-o blk3" aria-hidden="true" style="font-size:30px;margin:0px 0px 0px 10px;float:left;"></i>
+      <h3 class="blk3"   style="margin: 0px 0px 0px 10px;float: left;">12 may</h3>
+      <button class="boxnew btn" style="margin:20px 0px 0px 80px">#New</button>
+      <button class="boxhealth blk4">#Health</button>
+   </div></div>
+   </div>
+
+
+  <!-------------five----------->
+
+
+
+  <div class="h600 w100  fl">
+     <div class="h100 w100  fl">
+        <h2 class="font30 fl" style="margin-left:150px;margin-top:40px">Categories</h2>
+         <button class="btn2" style="margin:30px 0px 0px 500px;color: #0000009e;border: white;">
+         <i class="fa fa-globe fl font20" aria-hidden="true" style="margin:15px 0px 0px 0px;"></i> 
+        <h3 class="fl mrl10">Entertainment</h3>
+
+       <button class="btn2" style="margin:0px 0px 0px 10px;color: #0000009e;border: white;">
+       <i class="fa fa-address-card fl mt20" aria-hidden="true"></i> 
+        <h3 class="fl mrl10 mt20">Politics</h3>
+       
+      
+        <button class="btn2" style="margin:0px 0px 0px 10px;color: #0000009e;border: white;">
+       <i class="fa fa-briefcase fl mt20" aria-hidden="true"></i>
+        <h3 class="fl mrl10 mt20">Business</h3>
+
+        <button class="btn2" style="margin:0px 0px 0px 10px;color: #0000009e;border: white;">
+       <i class="fa fa-trophy fl mt20" aria-hidden="true"></i>
+        <h3 class="fl mrl10 mt20">Sports</h3> 
+
+
+
+     
+     </button>
+     </div><hr class="w80">
+
+     <div class="h500 w50  fl">
+        <div class="h500 w90 img2" style="margin :20px 0px 0px 50px;background-image:url(21.jpg);background-position: center;">
+         <div class="s" style="height:100%;width:100%">
+            <div class="h200 w100  fl "></div>
+         <div class="h200 w100  fl" style="background: #00000059;">
+           <h3 style="font-size:25px;color:white;margin: 10px 0px 0px 70px;">New Genration of People loving food</h3>
+            <button  class="btn" style="height:35px;width:10%;margin:0px 0px 0px 120px;border: azure;color: white;float: left;">#New</button>
+            <button  class="blk4" style="height:35px;width:15%;margin:0px 0px 0px 5px;border: azure;color: white;">#Sports</button>
+             <button  class="btn1" style="height:35px;width:15%;margin:0px 0px 0px 5px;border: azure;color: white;">#Trading</button>
+             <p style="font-size:20px;color:white;margin: 10px 0px 0px 40px;">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley.</p>
+             <i class="fa fa-male blk3" aria-hidden="true" style="font-size:30px;margin: 30px 0px 0px 80px;float: left;"></i>
+            <h3 class="blk3" style="float: left;margin: 30px 0px 0px 10px;">john doe</h3>
+            <i class="fa fa-clock-o blk3" aria-hidden="true" style="font-size:30px;margin:30px 0px 0px 10px;float:left;"></i>
+            <h3 class="blk3"   style="margin: 30px 0px 0px 10px;float: left;">12 may</h3>
+            <i class="fa fa-comments-o blk3" aria-hidden="true" style="font-size:30px;float:left;margin: 25px 0px 0px 10px;"></i>
+            <p class="blk3" style="float: left;margin: 35px 0px 0px 10px;"> 2 comments</p>
+         </div>
+         </div>
+         </div>
+         </div>
+
+
+     <div class="h500 w50 fl ">
+     <div class="h400 w80 img2" style="margin :0px 0px 0px 10px">
+      <div class="h150 w30 fl  mt20" ><img class="h150 w100" src="13.jpg"> </div>
+   <div class="h150 w70 fl mt20 "><p class="font20 mglt" style="margin-top: 10px;">7 reasons Hollywood doesn’t make romantic comedies anymore</p>
+     <i class="fa fa-male blk3" aria-hidden="true" style="font-size:30px;margin: -10px 0px 10px 10px;float: left;"></i>
+            <h3 class="blk3" style="float: left;margin: -10px 0px 0px 10px;">john doe</h3>
+            <i class="fa fa-clock-o blk3" aria-hidden="true" style="font-size:30px;margin:-10px 0px 0px 10px;float:left;"></i>
+            <h3 class="blk3"   style="margin: -10px 0px 0px 10px;float: left;">12 may</h3>
+            <i class="fa fa-comments-o blk3" aria-hidden="true" style="font-size:30px;float:left;margin: -10px 0px 0px 10px;"></i>
+            <p class="blk3" style="float: left;margin: -5px 0px 0px 10px;"> 2 comments</p>
+            <button class="boxnew btn1" style="margin:30px 0px 0px -330px">#New</button>
+            <button class="boxhealth blk4">#sports</button>
+           </div>
+            <hr class="w100" style="margin-top: 10px;float: left;" >
+
+   <div class="h150 w30 fl  mt20"><img class="h150 w100" src="14.jpg"> </div>
+   <div class="h150 w70 fl mt20 "><p class="font20 mglt">Must have gadgets in this century</p>
+    <i class="fa fa-male blk3" aria-hidden="true" style="font-size:30px;margin: 0px 0px 0px 10px;float: left;"></i>
+            <h3 class="blk3" style="float: left;margin: 0px 0px 0px 10px;">john doe</h3>
+            <i class="fa fa-clock-o blk3" aria-hidden="true" style="font-size:30px;margin:0px 0px 0px 10px;float:left;"></i>
+            <h3 class="blk3"   style="margin: 0px 0px 0px 10px;float: left;">12 may</h3>
+            <i class="fa fa-comments-o blk3" aria-hidden="true" style="font-size:30px;float:left;margin: -5px 0px 0px 10px;"></i>
+            <p class="blk3" style="float: left;margin: 5px 0px 0px 10px;"> 2 comments</p>
+            <button class="boxnew btn" style="margin:40px 0px 0px -330px">#New</button>
+            <button class="boxhealth btn1">#Health</button>
+            </div>
+          <hr class="w100" style="margin-top: 10px;float: left;" >
+
+
+
+
+<div class="h200 w30 fl mt20 "><img class="h150 w100" src="15.jpg"> </div>
+   <div class="h200 w70 fl mt20 " ><p class="font20 mglt">Why conservatives love to hate Alexandria Ocasio-Cortez</p> 
+        <i class="fa fa-male blk3" aria-hidden="true" style="font-size:30px;margin: 0px 0px 0px 10px;float: left;"></i>
+            <h3 class="blk3" style="float: left;margin: 0px 0px 0px 10px;">john doe</h3>
+            <i class="fa fa-clock-o blk3" aria-hidden="true" style="font-size:30px;margin:0px 0px 0px 10px;float:left;"></i>
+            <h3 class="blk3"   style="margin: 0px 0px 0px 10px;float: left;">12 may</h3>
+            <i class="fa fa-comments-o blk3" aria-hidden="true" style="font-size:30px;float:left;margin: -5px 0px 0px 10px;"></i>
+            <p class="blk3" style="float: left;margin: 5px 0px 0px 10px;"> 2 comments</p>
+            <button class="boxnew btn" style="margin:40px 0px 0px -330px">#New</button>
+            <button class="boxhealth blk4">#Health</button>
+
+        </div>
+       </div> 
+       </div>
+       </div>
+
+<!---------------Six-------------- ARMY--->
+
+ <div class="h600 w100 fl">
+    <div class="h500 w50 fl mt20" style="margin-top: 80px;">
+      <div class="h150 w30 fl mt20 " > <img class="h150 w100" src="10.jpg"> </div>
+   <div class="h150 w70 fl mt20 " ><p class="font20 mglt">Watch: the 3 best performances of the 2018 VMAs</p>
+     <i class="fa fa-male blk3" aria-hidden="true" style="font-size:30px;margin: 0px 0px 0px 10px;float: left;"></i>
+            <h3 class="blk3" style="float: left;margin: 0px 0px 0px 10px;">john doe</h3>
+            <i class="fa fa-clock-o blk3" aria-hidden="true" style="font-size:30px;margin:0px 0px 0px 10px;float:left;"></i>
+            <h3 class="blk3"   style="margin: 0px 0px 0px 10px;float: left;">12 may</h3>
+            <i class="fa fa-comments-o blk3" aria-hidden="true" style="font-size:30px;float:left;margin: -5px 0px 0px 10px;"></i>
+            <p class="blk3" style="float: left;margin: 5px 0px 0px 10px;"> 2 comments</p>
+            <button class="boxnew btn" style="margin:40px 0px 0px -330px">#New</button>
+            <button class="boxhealth blk4">#Health</button>
+
+    </div>
+    <hr class="w100" style="margin-top: 10px;float: left;" >
+
+
+<div class="h150 w30 fl  mt20" ><img class="h150 w100" src="11.jpg"> </div>
+   <div class="h150 w70 fl mt20 " ><p class="font20 mglt">Music bringing people together everywhere</p>
+     <i class="fa fa-male blk3" aria-hidden="true" style="font-size:30px;margin: 0px 0px 0px 10px;float: left;"></i>
+            <h3 class="blk3" style="float: left;margin: 0px 0px 0px 10px;">john doe</h3>
+            <i class="fa fa-clock-o blk3" aria-hidden="true" style="font-size:30px;margin:0px 0px 0px 10px;float:left;"></i>
+            <h3 class="blk3"   style="margin: 0px 0px 0px 10px;float: left;">12 may</h3>
+            <i class="fa fa-comments-o blk3" aria-hidden="true" style="font-size:30px;float:left;margin: -5px 0px 0px 10px;"></i>
+            <p class="blk3" style="float: left;margin: 5px 0px 0px 10px;"> 2 comments</p>
+            <button class="boxnew btn" style="margin:40px 0px 0px -330px">#New</button>
+            <button class="boxhealth btn1">#Health</button>
+          </div>
+           <hr class="w100" style="margin-top: 10px;float: left;" >
+
+<div class="h150 w30 fl mt20 " ><img class="h150 w100" src="12.jpg"> </div>
+   <div class="h150 w70 fl mt20 " ><p class="font20 mglt">“Speaks perfect English”: Trump’s offensive praise of a Latino Border Patrol agent</p>
+    <i class="fa fa-male blk3" aria-hidden="true" style="font-size:30px;margin: 0px 0px 0px 10px;float: left;"></i>
+            <h3 class="blk3" style="float: left;margin: 0px 0px 0px 10px;">john doe</h3>
+            <i class="fa fa-clock-o blk3" aria-hidden="true" style="font-size:30px;margin:0px 0px 0px 10px;float:left;"></i>
+            <h3 class="blk3"   style="margin: 0px 0px 0px 10px;float: left;">12 may</h3>
+            <i class="fa fa-comments-o blk3" aria-hidden="true" style="font-size:30px;float:left;margin: -5px 0px 0px 10px;"></i>
+            <p class="blk3" style="float: left;margin: 5px 0px 0px 10px;"> 2 comments</p>
+            <button class="boxnew btn" style="margin:30px 0px 0px -330px">#New</button>
+            <button class="boxhealth blk4">#Health</button>
+             </div>
+       
+    </div>
+
+
+
+
+
+
+    <div class="h600 w50 fl">
+     <div class="img2" style="height:500px;width:90%;margin: 100px 0px 0px 10px;background-image: url(9.jpg);background-position: center;">
+                <div style="height:250px;width:100%;background:#00000057;margin:250px 0px 0px 0px;float:left;">
+                <h3 style="font-size:25px;color:white;margin: 10px 0px 0px 30px;">2018's most fascinating Governor's Election,explained</h3>
+                <button  class="btn" style="height:35px;width:10%;margin:0px 0px 0px 180px;border: azure;color: white;float: left;">#New</button>
+                <button  class="blk4" style="height:35px;width:15%;margin:0px 0px 0px 5px;border: azure;color: white;">#Security</button>
+                <button  class="btn1" style="height:35px;width:15%;margin:0px 0px 0px 5px;border: azure;color: white;">#Politics</button>
+                 <p style="font-size:20px;color:white;margin: 10px 0px 0px 40px;">Lorem Ipsum has been the industry's standard dummy text ever since<br> the 1500s, when an unknown printer took a galley.</p>
+             <i class="fa fa-male blk3" aria-hidden="true" style="font-size:30px;margin: 30px 0px 0px 150px;float: left;"></i>
+            <h3 class="blk3" style="float: left;margin: 30px 0px 0px 10px;">john doe</h3>
+            <i class="fa fa-clock-o blk3" aria-hidden="true" style="font-size:30px;margin:30px 0px 0px 10px;float:left;"></i>
+            <h3 class="blk3"   style="margin: 30px 0px 0px 10px;float: left;">12 may</h3>
+            <i class="fa fa-comments-o blk3" aria-hidden="true" style="font-size:30px;float:left;margin: 25px 0px 0px 10px;"></i>
+            <p class="blk3" style="float: left;margin: 35px 0px 0px 10px;"> 2 comments</p>
+      
+    </div>
+
+ </div></div>
+</div>
+<!----------------Seven------------->
+<div class="h100 w100  fl"></div>
+
+ <div class="h600 w100 fl mb50">
+
+    <div class="h500 w50  fl">
+        <div class="h500 w90 img2" style="margin :20px 0px 0px 50px;background-image:url(21.jpg);background-position: center;">
+         <div class="s" style="height:100%;width:100%">
+            <div class="h200 w100  fl "></div>
+         <div class="h200 w100  fl" style="background: #00000059;">
+           <h3 style="font-size:25px;color:white;margin: 10px 0px 0px 70px;">New Genration of People loving food</h3>
+            <button  class="btn" style="height:35px;width:10%;margin:0px 0px 0px 120px;border: azure;color: white;float: left;">#New</button>
+            <button  class="blk4" style="height:35px;width:15%;margin:0px 0px 0px 5px;border: azure;color: white;">#Sports</button>
+             <button  class="btn1" style="height:35px;width:15%;margin:0px 0px 0px 5px;border: azure;color: white;">#Trading</button>
+             <p style="font-size:20px;color:white;margin: 10px 0px 0px 40px;">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley.</p>
+             <i class="fa fa-male blk3" aria-hidden="true" style="font-size:30px;margin: 30px 0px 0px 80px;float: left;"></i>
+            <h3 class="blk3" style="float: left;margin: 30px 0px 0px 10px;">john doe</h3>
+            <i class="fa fa-clock-o blk3" aria-hidden="true" style="font-size:30px;margin:30px 0px 0px 10px;float:left;"></i>
+            <h3 class="blk3"   style="margin: 30px 0px 0px 10px;float: left;">12 may</h3>
+            <i class="fa fa-comments-o blk3" aria-hidden="true" style="font-size:30px;float:left;margin: 25px 0px 0px 10px;"></i>
+            <p class="blk3" style="float: left;margin: 35px 0px 0px 10px;"> 2 comments</p>
+         </div>
+         </div>
+         </div>
+         </div>
+    
+
+  <div class="h500 w50 fl ">
+     <div class="h400 w80 img2" style="margin :0px 0px 0px 10px">
+      <div class="h150 w30 fl  mt20" ><img class="h150 w100" src="13.jpg"> </div>
+   <div class="h150 w70 fl mt20 "><p class="font20 mglt" style="margin-top: 10px;">7 reasons Hollywood doesn’t make romantic comedies anymore</p>
+     <i class="fa fa-male blk3" aria-hidden="true" style="font-size:30px;margin: -10px 0px 10px 10px;float: left;"></i>
+            <h3 class="blk3" style="float: left;margin: -10px 0px 0px 10px;">john doe</h3>
+            <i class="fa fa-clock-o blk3" aria-hidden="true" style="font-size:30px;margin:-10px 0px 0px 10px;float:left;"></i>
+            <h3 class="blk3"   style="margin: -10px 0px 0px 10px;float: left;">12 may</h3>
+            <i class="fa fa-comments-o blk3" aria-hidden="true" style="font-size:30px;float:left;margin: -10px 0px 0px 10px;"></i>
+            <p class="blk3" style="float: left;margin: -5px 0px 0px 10px;"> 2 comments</p>
+            <button class="boxnew btn1" style="margin:30px 0px 0px -330px">#New</button>
+            <button class="boxhealth blk4">#sports</button>
+           </div>
+            <hr class="w100" style="margin-top: 10px;float: left;" >
+
+   <div class="h150 w30 fl  mt20"><img class="h150 w100" src="14.jpg"> </div>
+   <div class="h150 w70 fl mt20 "><p class="font20 mglt">Must have gadgets in this century</p>
+    <i class="fa fa-male blk3" aria-hidden="true" style="font-size:30px;margin: 0px 0px 0px 10px;float: left;"></i>
+            <h3 class="blk3" style="float: left;margin: 0px 0px 0px 10px;">john doe</h3>
+            <i class="fa fa-clock-o blk3" aria-hidden="true" style="font-size:30px;margin:0px 0px 0px 10px;float:left;"></i>
+            <h3 class="blk3"   style="margin: 0px 0px 0px 10px;float: left;">12 may</h3>
+            <i class="fa fa-comments-o blk3" aria-hidden="true" style="font-size:30px;float:left;margin: -5px 0px 0px 10px;"></i>
+            <p class="blk3" style="float: left;margin: 5px 0px 0px 10px;"> 2 comments</p>
+            <button class="boxnew btn" style="margin:40px 0px 0px -330px">#New</button>
+            <button class="boxhealth btn1">#Health</button>
+            </div>
+          <hr class="w100" style="margin-top: 10px;float: left;" >
+
+
+
+
+<div class="h200 w30 fl mt20 "><img class="h150 w100" src="15.jpg"> </div>
+   <div class="h200 w70 fl mt20 " ><p class="font20 mglt">Why conservatives love to hate Alexandria Ocasio-Cortez</p> 
+        <i class="fa fa-male blk3" aria-hidden="true" style="font-size:30px;margin: 0px 0px 0px 10px;float: left;"></i>
+            <h3 class="blk3" style="float: left;margin: 0px 0px 0px 10px;">john doe</h3>
+            <i class="fa fa-clock-o blk3" aria-hidden="true" style="font-size:30px;margin:0px 0px 0px 10px;float:left;"></i>
+            <h3 class="blk3"   style="margin: 0px 0px 0px 10px;float: left;">12 may</h3>
+            <i class="fa fa-comments-o blk3" aria-hidden="true" style="font-size:30px;float:left;margin: -5px 0px 0px 10px;"></i>
+            <p class="blk3" style="float: left;margin: 5px 0px 0px 10px;"> 2 comments</p>
+            <button class="boxnew btn" style="margin:40px 0px 0px -330px">#New</button>
+            <button class="boxhealth blk4">#Health</button>
+
+        </div>
+       </div> 
+       </div>
+       </div>
+
+
+<!-----------Eight---------- side paint girl--->
+
+<div class="h600 w100  fl ">
+
+   <div class="h500 w48 fl mrl20" style="">
+      <div class="h150 w30 fl mt20 " > <img class="h150 w100" src="10.jpg"> </div>
+   <div class="h150 w70 fl mt20 " ><p class="font20 mglt">Watch: the 3 best performances of the 2018 VMAs</p>
+     <i class="fa fa-male blk3" aria-hidden="true" style="font-size:30px;margin: 0px 0px 0px 10px;float: left;"></i>
+            <h3 class="blk3" style="float: left;margin: 0px 0px 0px 10px;">john doe</h3>
+            <i class="fa fa-clock-o blk3" aria-hidden="true" style="font-size:30px;margin:0px 0px 0px 10px;float:left;"></i>
+            <h3 class="blk3"   style="margin: 0px 0px 0px 10px;float: left;">12 may</h3>
+            <i class="fa fa-comments-o blk3" aria-hidden="true" style="font-size:30px;float:left;margin: -5px 0px 0px 10px;"></i>
+            <p class="blk3" style="float: left;margin: 5px 0px 0px 10px;"> 2 comments</p>
+            <button class="boxnew btn" style="margin:40px 0px 0px -330px">#New</button>
+            <button class="boxhealth blk4">#Health</button>
+
+    </div>
+    <hr class="w100" style="margin-top: 10px;float: left;" >
+
+
+<div class="h150 w30 fl  mt20" ><img class="h150 w100" src="11.jpg"> </div>
+   <div class="h150 w70 fl mt20 " ><p class="font20 mglt">Music bringing people together everywhere</p>
+     <i class="fa fa-male blk3" aria-hidden="true" style="font-size:30px;margin: 0px 0px 0px 10px;float: left;"></i>
+            <h3 class="blk3" style="float: left;margin: 0px 0px 0px 10px;">john doe</h3>
+            <i class="fa fa-clock-o blk3" aria-hidden="true" style="font-size:30px;margin:0px 0px 0px 10px;float:left;"></i>
+            <h3 class="blk3"   style="margin: 0px 0px 0px 10px;float: left;">12 may</h3>
+            <i class="fa fa-comments-o blk3" aria-hidden="true" style="font-size:30px;float:left;margin: -5px 0px 0px 10px;"></i>
+            <p class="blk3" style="float: left;margin: 5px 0px 0px 10px;"> 2 comments</p>
+            <button class="boxnew btn" style="margin:40px 0px 0px -330px">#New</button>
+            <button class="boxhealth btn1">#Health</button>
+          </div>
+           <hr class="w100" style="margin-top: 10px;float: left;" >
+
+<div class="h150 w30 fl mt20 " ><img class="h150 w100" src="12.jpg"> </div>
+   <div class="h150 w70 fl mt20 " ><p class="font20 mglt">“Speaks perfect English”: Trump’s offensive praise of a Latino Border Patrol agent</p>
+    <i class="fa fa-male blk3" aria-hidden="true" style="font-size:30px;margin: 0px 0px 0px 10px;float: left;"></i>
+            <h3 class="blk3" style="float: left;margin: 0px 0px 0px 10px;">john doe</h3>
+            <i class="fa fa-clock-o blk3" aria-hidden="true" style="font-size:30px;margin:0px 0px 0px 10px;float:left;"></i>
+            <h3 class="blk3"   style="margin: 0px 0px 0px 10px;float: left;">12 may</h3>
+            <i class="fa fa-comments-o blk3" aria-hidden="true" style="font-size:30px;float:left;margin: -5px 0px 0px 10px;"></i>
+            <p class="blk3" style="float: left;margin: 5px 0px 0px 10px;"> 2 comments</p>
+            <button class="boxnew btn" style="margin:30px 0px 0px -330px">#New</button>
+            <button class="boxhealth blk4">#Health</button>
+             </div>
+       
+    </div>
+
+
+
+<div class="h600 w50 fl">
+    
+    <div class="img2 h500 50 fl" style="background-image: url(4.jpg);background-position:center;">
+            <div class="sh">
+            <div  style="height:200px;width:100%;"></div>
+            <div  style="height:200px;width:100%;margin-top: 120px;">
+            <h3 style="font-size: 25px;color: white;margin: 30px 0px 0px 50px;">Creativity comes within itself for everyone</h3>
+            <button  class="btn" style="height:40px;width:15%;margin:0px 0px 0px 150px;border: azure;color: white;float: left;">#New</button>
+            <button  class="blk4" style="height:40px;width:15%;margin:0px 0px 0px 10px;border: azure;color: white;">#Education</button>
+            <button  class="btn1" style="height:40px;width:15%;margin:0px 0px 0px 10px;border: azure;color: white;">#Children</button>
+            <p style="font-size:20px;color:white;margin: 0px 0px 0px 40px;float: left;">Lorem Ipsum has been the industry's standard dummy text ever since<br> the 1500s, when an unknown printer took a galley.</p>
+            <i class="fa fa-male blk3" aria-hidden="true" style="font-size:30px;margin: 10px 0px 0px 190px;float: left;"></i>
+            <h3 class="blk3" style="float: left;margin: 15px 0px 0px 10px;">john doe</h3>
+            <i class="fa fa-clock-o blk3" aria-hidden="true" style="font-size:30px;margin:10px 0px 0px 10px;float:left;"></i>
+            <h3 class="blk3"   style="margin: 15px 0px 0px 10px;float: left;">12 may</h3>
+            <i class="fa fa-comments-o blk3" aria-hidden="true" style="font-size:30px;float:left;margin: 15px 0px 0px 15px;"></i>
+            <p class="blk3" style="float: left;margin: 20px 0px 0px 10px;"> 2 comments</p>
+            </div>
+    
+ </div>
+
+</div>
+</div>
+
+<!------------9-----------Fashion---->
+<div class="h700 w100  fl">
+   <div style="height:100px;width:100%;">
+      <h3 style="font-size: 30px;margin: 5px 0px 0px 90px;">Fashion<hr style="width:90%;margin: 0px 0px 0px 0px;"></h3></div>
+  
+<div class="h500 w20 fl mrl80">
+   <div class="h300 w100 clw" style="background-image: url(22.jpg);background-size: cover;">
+      <div class="h150 w100 fl"></div>
+      <div class="h120 w100 fl  mt30">
+        <center style="color: white;">
+<h1 style="font-size: 20px">Upcoming 50% sales off</h1><hr class="w80">
+<i class="fa fa-male blk3" aria-hidden="true" ></i> <span class="font20 pclw">   john doe</span> 
+<i class="fa fa-clock-o blk3" aria-hidden="true" ></i><span class="font20 pclw">12 may</span><br>
+ <button class="boxnew btn">#New</button>
+            <button class="boxFashion btn1">#Fashion</button>
+        </center>
+            
+      </div>
+   </div>
+
+
+
+   <div class="h200 w100 clbe mt10" style="background-image: url(23.jpg);background-size: cover;">
+      <div class="h100 w100 fl"></div>
+     <div class="h100 w100 fl" style="margin-top:-20px">
+         <center style="color: white;">
+<h1 style="font-size: 20px">Look Best For Interview</h1><hr class="w80">
+<i class="fa fa-male blk3" aria-hidden="true" ></i> <span class="font20 pclw">   john doe</span> 
+<i class="fa fa-clock-o blk3" aria-hidden="true" ></i><span class="font20 pclw">12 may</span><br>
+ <button class="boxnew btn">#New</button>
+            <button class="boxFashion blk4">#Fashion</button>
+        </center>
+     </div>
+      
+   </div>
+
+
+
+
+  </div>
+<div class="h500 w20  fl mrl10"> 
+  <div class="h200 w100 clbe" style="background-image: url(24.jpg);background-size: cover;">
+     <div class="h100 w100 fl"></div>
+     <div class="h100 w100 fl" style="margin-top:-20px">
+         <center style="color: white;">
+         <h1 style="font-size: 20px">Look Best For Interview</h1><hr class="w80">
+         <i class="fa fa-male blk3" aria-hidden="true" ></i> <span class="font20 pclw">   john doe</span> 
+         <i class="fa fa-clock-o blk3" aria-hidden="true" ></i><span class="font20 pclw">12 may</span><br>
+          <button class="boxnew btn">#New</button>
+            <button class="boxFashion blk4">#Fashion</button>
+
+        </center>
+     </div>
+  </div>
+
+
+
+
+
+
+
+
+  <div class="h300 w100 clb mt10 " style="background-image: url(25.jpg);background-size: cover;">
+    <div class="h150 w100 fl"></div>
+      <div class="h120 w100 fl  mt30">
+        <center style="color: white;">
+<h1 style="font-size: 20px">Look Best For Interview</h1><hr class="w80">
+<i class="fa fa-male blk3" aria-hidden="true" ></i> <span class="font20 pclw">   john doe</span> 
+<i class="fa fa-clock-o blk3" aria-hidden="true" ></i><span class="font20 pclw">12 may</span><br>
+ <button class="boxnew btn">#New</button>
+            <button class="boxFashion btn1">#Fashion</button>
+        </center>
+         </div>
+
+         </div>
+
+
+ 
+
+
+
+
+
+ </div>
+<div class="h500 w40 fl mrl20" style="background-image: url(26.jpg);background-size: cover;"> 
+
+   <div class="bbox">
+
+     <div class="h300 w100 fl"></div>
+     <div class="h200 w100 fl mt40">
+        <center>
+           <h1 class="font25 ">Lopez announces her new fashion collection</h1><hr class="w85">
+           <i class="fa fa-male blk3" aria-hidden="true" ></i> <span class="font20 pclw">john doe</span> 
+           <i class="fa fa-clock-o blk3" aria-hidden="true" ></i><span class="font20 pclw">12 may</span><br>
+           <button class="boxnew btn">#New</button>
+            <button class="boxFashion btn1">#Fashion</button>
+
+        </center>
+     </div>
+</div>
+ </div>
+</div>
+<!------------10 ----------- six images--->
+<div class="h600 w100  fl">
+   <div class="h550 w100 fl  mt50">
+    <div class="h250 w30  fl mrl50 zoom" style="background-image: url(27.jpg);background-position:center">
+      <div class="bbox fl">
+       <center>
+          <h1 class="pclw mt50 pbtn ">Top 10 guitar Riffs</h1>
+          <button class="boxnew btn">#New</button>
+          <button class="boxmusic blk4">#Music</button>
+          <button class="boxtrending btn1">#Trending</button><br>
+          <i class="fa fa-male blk3 fl mrl30 font30 mt10 " aria-hidden="true" ></i>
+            <span class="blk3 fl font20 mrl10 mt10" >Bob dylan</span>
+            <i class="fa fa-clock-o blk3 fl font30 mt10 mrl20" aria-hidden="true"></i>
+            <span class="blk3 fl font20 mrl10 mt10"  >12 may</span>
+            <i class="fa fa-comments-o blk3 fl mt10 mrl10" aria-hidden="true" style="font-size:30px;"></i>
+            <span class="blk3 fl font20 mt10 mrl10"> 2 comments</span>
+        </center>
+        </div>
+    </div>
+
+<div class="h250 w30  fl mrl10 zoom"  style="background-image: url(28.jpg);background-position:center">
+   <div class="bbox fl">
+    <center>
+          <h1 class="pclw mt50 pbtn ">Top Golf Courts </h1>
+          <button class="boxnew btn">#New</button>
+          <button class="boxsports blk4">#Sports</button>
+          <button class="boxtrending btn1">#Trending</button><br>
+          <i class="fa fa-male blk3 fl mrl50 font30 mt10 " aria-hidden="true" ></i>
+            <span class="blk3 fl font20 mrl10 mt10" >john doe</span>
+            <i class="fa fa-clock-o blk3 fl font30 mt10 mrl20" aria-hidden="true"></i>
+            <span class="blk3 fl font20 mrl10 mt10"  >12 may</span>
+            <i class="fa fa-comments-o blk3 fl mt10 mrl10" aria-hidden="true" style="font-size:30px;"></i>
+            <span class="blk3 fl font20 mt10 mrl10"> 2 comments</span>
+        </center>
+        </div>
+     </div> 
+
+
+    <div class="h250 w30  fl mrl10 zoom"  style="background-image: url(29.jpg);background-position:center">
+      <div class="bbox fl">
+      <center>
+          <h1 class="pclw mt50 pbtn ">Early Morning Breakfast</h1>
+          <button class="boxnew btn">#New</button>
+          <button class="boxsports blk4">#Sports</button>
+          <button class="boxtrending btn1">#Trending</button><br>
+          <i class="fa fa-male blk3 fl mrl50 font30 mt10 " aria-hidden="true" ></i>
+            <span class="blk3 fl font20 mrl10 mt10" >john doe</span>
+            <i class="fa fa-clock-o blk3 fl font30 mt10 mrl20" aria-hidden="true"></i>
+            <span class="blk3 fl font20 mrl10 mt10"  >12 may</span>
+            <i class="fa fa-comments-o blk3 fl mt10 mrl10" aria-hidden="true" style="font-size:30px;"></i>
+            <span class="blk3 fl font20 mt10 mrl10"> 2 comments</span>
+        </center> 
+        </div> 
+   </div>
+
+    <div class="h250 w30  fl mrl50 mt10 zoom"  style="background-image: url(30.jpg);background-position:center">
+      <div class="bbox fl">
+     <center>
+          <h1 class="pclw mt50 pbtn ">Children The Next Gen</h1>
+          <button class="boxnew btn">#New</button>
+          <button class="boxsports blk4">#Sports</button>
+          <button class="boxtrending btn1">#Trending</button><br>
+          <i class="fa fa-male blk3 fl mrl50 font30 mt10 " aria-hidden="true" ></i>
+            <span class="blk3 fl font20 mrl10 mt10" >john doe</span>
+            <i class="fa fa-clock-o blk3 fl font30 mt10 mrl20" aria-hidden="true"></i>
+            <span class="blk3 fl font20 mrl10 mt10"  >12 may</span>
+            <i class="fa fa-comments-o blk3 fl mt10 mrl10" aria-hidden="true" style="font-size:30px;"></i>
+            <span class="blk3 fl font20 mt10 mrl10"> 2 comments</span>
+        </center>
+        </div>    
+      </div>
+
+    <div class="h250 w30  fl mrl10 mt10 zoom"  style="background-image: url(31.jpg);background-position:center">
+      <div class="bbox fl">
+       <center>
+          <h1 class="pclw mt50 pbtn ">Summer Beach</h1>
+          <button class="boxnew btn">#New</button>
+          <button class="boxsports blk4">#Sports</button>
+          <button class="boxtrending btn1">#Trending</button><br>
+          <i class="fa fa-male blk3 fl mrl50 font30 mt10 " aria-hidden="true" ></i>
+            <span class="blk3 fl font20 mrl10 mt10" >john doe</span>
+            <i class="fa fa-clock-o blk3 fl font30 mt10 mrl20" aria-hidden="true"></i>
+            <span class="blk3 fl font20 mrl10 mt10"  >12 may</span>
+            <i class="fa fa-comments-o blk3 fl mt10 mrl10" aria-hidden="true" style="font-size:30px;"></i>
+            <span class="blk3 fl font20 mt10 mrl10"> 2 comments</span>
+        </center>
+        </div>    
+     </div>
+
+
+    <div class="h250 w30  fl mrl10 mt10 zoom"  style="background-image: url(32.jpg);background-position:center;">
+       <div class="bbox fl">
+       <center>
+          <h1 class="pclw mt50 pbtn ">Mountains Calling</h1>
+          <button class="boxnew btn">#New</button>
+          <button class="boxsports blk4">#Sports</button>
+          <button class="boxtrending btn1">#Trending</button><br>
+          <i class="fa fa-male blk3 fl mrl50 font30 mt10 " aria-hidden="true" ></i>
+            <span class="blk3 fl font20 mrl10 mt10" >john doe</span>
+            <i class="fa fa-clock-o blk3 fl font30 mt10 mrl20" aria-hidden="true"></i>
+            <span class="blk3 fl font20 mrl10 mt10"  >12 may</span>
+            <i class="fa fa-comments-o blk3 fl mt10 mrl10" aria-hidden="true" style="font-size:30px;"></i>
+            <span class="blk3 fl font20 mt10 mrl10"> 2 comments</span>
+        </center>   
+    </div>
+    </div>  
+
+   </div>
+</div>
+
+<!---------------11------ find inst---->
+<div class="h800 w100 fl " style="background: url(2.png);background-size: cover;background-color: black;">
+   <center>
+      <h1 class="pclw font25">Find Us on Instagram<hr class="w20"></h1>
+   </center>
+   <div class="h200 w90 fl  mrl100">
+      <div class="h200 w15 clb fl" style="background-image: url(33.jpg);background-size: cover;"></div>
+      <div class="h200 w15 clb fl" style="background-image: url(34.jpg);background-size: cover;"></div>
+      <div class="h200 w15 clb fl" style="background-image: url(35.jpg);background-size: cover;"></div>
+      <div class="h200 w15 clb fl" style="background-image: url(36.jpg);background-size: cover;"></div>
+      <div class="h200 w15 clb fl" style="background-image: url(37.jpg);background-size: cover;"></div>
+      <div class="h200 w15 clb fl" style="background-image: url(38.jpg);background-size: cover;"></div>
+   </div>
+   <br>
+
+
+<div class="h500 w30 mt80 fl">
+
+    <h1 class=" font30 mt50 pclw" style="margin-left: 80px">NewMag</h1>
+    <hr class="w70">
+    <center>
+       <p class="font10 mrl20 pclw">amet, consetetur sadipscing elitr, sed diam nonumy<br> eirmod tempor invidunt ut labore et dolore magna<br> aliquyam erat.</p>
+       
+    </center>
+    <i class="fa fa-facebook-official fl font30 mrl80 mt30 pclw " aria-hidden="true"></i>
+    <i class="fa fa-twitter fl mrl20 font30 mt30 pclw" aria-hidden="true"></i>
+    <i class="fa fa-instagram fl mrl20 font30 mt30 pclw" aria-hidden="true"></i>
+
+   </div>
+
+
+
+<div class="h500 w20  fl">
+   <h1 class="mrl30 mt50 pclw">Categories</h1>
+   <hr class="w90">
+   <span class="mrl20 pclw">Entertainment</span>
+   <br><br>
+   <span class="mrl20 pclw">Sports</span>
+   <br><br>
+   <span class="mrl20 pclw">Polictics</span>
+   <br><br>
+   <span class="mrl20 pclw">National</span>
+   <br><br>
+   <span class="mrl20 pclw">Blog</span>
+   <br><br>
+
+ </div>
+
+<div class="h500 w20  fl">
+   <h1 class="mrl30 mt50 pclw">Popular Tags</h1>
+   <hr class="w90">
+    <span class="mrl20 pclw">Entertainment</span>
+   <br><br>
+   <span class="mrl20 pclw">Sports</span>
+   <br><br>
+   <span class="mrl20 pclw">Polictics</span>
+   <br><br>
+   <span class="mrl20 pclw">National</span>
+   <br><br>
+   <span class="mrl20 pclw">Blog</span>
+   <br><br>
+</div>
+
+
+
+<div class="h500 w30  fl">
+   <h1 class="mrl30 mt50 pclw">Newsletter</h1>
+   <hr class="w90">
+   <span class="mrl20 pclw">Dont Miss Anything</span>
+   <br><br>
+    <span class="mrl20 pclw">Subscribe to our #newsletter</span>
+   <br><br>
+   <form>
+      <input class="h25 w70 mrl20 fl" type="text" placeholder="Enter Email">
+      <button style="background:red;border:none;color: white;"><i class="fa fa-paper-plane font25" aria-hidden="true"></i></button>
+
+   </form>
+</div>
+
+
+</div>
+
+
+
+</div>
+
+<script>
+var myVar;
+
+function myFunction() {
+  myVar = setTimeout(showPage, 3000);
+}
+
+function showPage() {
+  document.getElementById("loader").style.display = "none";
+  document.getElementById("myDiv").style.display = "block";
+}
+</script>
+
+
+
+
+
+
+</body>
+</html>

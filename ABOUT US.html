@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="mymeg.css">
+
+        <style>
+         /* Center the loader */
+         .container {
+  position: absolute;
+  top: 45%;
+  left: 48%;
+}
+
+.square {
+  width: 40px;
+  height: 400px;
+  background: rgb(231, 183, 25);
+  border-radius: 10px;
+  display: block;
+  /*margin:10px;*/
+  -webkit-animation: turn 2.5s ease infinite;
+  animation: turn 2.5s ease infinite;
+  box-shadow: rgb(199, 243, 5) 0px 1px 15px 0px;
+}
+
+.top {
+  position: absolute;
+  left: 40%;
+  top: 50%;
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+.bottom {
+  position: absolute;
+  left: 40%;
+  top: 50%;
+  -webkit-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+}
+
+.left {
+  position: absolute;
+  left: 40%;
+  top: 50%;
+}
+
+.right {
+  position: absolute;
+  left: 40%;
+  top: 50%;
+  -webkit-transform: rotate(-180deg);
+  transform: rotate(-180deg);
+}
+
+@-webkit-keyframes turn {
+  0% {
+    transform: translateX(0) translateY(0) rotate(0);
+  }
+
+  50% {
+    transform: translateX(400%) translateY(100%) rotate(90deg);
+  }
+
+  100% {
+    transform: translateX(0) translateY(0) rotate(0);
+  }
+}
+
+@keyframes turn {
+  0% {
+    transform: translateX(0) translateY(0) rotate(0);
+  }
+
+  70% {
+    transform: translateX(400%) translateY(100%) rotate(90deg);
+  }
+
+  100% {
+    transform: translateX(0) translateY(0) rotate(0);
+  }
+}
+         
+         @-webkit-keyframes spin {
+           0% { -webkit-transform: rotate(0deg); }
+           100% { -webkit-transform: rotate(360deg); }
+         }
+         
+         @keyframes spin {
+           0% { transform: rotate(0deg); }
+           100% { transform: rotate(360deg); }
+         }
+         
+         /* Add animation to "page content" */
+         .animate-bottom {
+           position: relative;
+           -webkit-animation-name: animatebottom;
+           -webkit-animation-duration: 1s;
+           animation-name: animatebottom;
+           animation-duration: 1s
+         }
+         
+         @-webkit-keyframes animatebottom {
+           from { bottom:-100px; opacity:0 } 
+           to { bottom:0px; opacity:1 }
+         }
+         
+         @keyframes animatebottom { 
+           from{ bottom:-100px; opacity:0 } 
+           to{ bottom:0; opacity:1 }
+         }
+         
+         #myDiv {
+           display: none;
+         }
+
+         .my{
+            background-color: black;height: 775px;width: 100%;
+         }
+         </style>
+
+
+
+
+
+
+
+   </head>
+   <body onload="myFunction()" style="margin:0;">
+
+      <div id="loader">
+         <div class="my">
+         <div class="container">
+            <div class="top">
+              <div class="square">
+                <div class="square">
+                  <div class="square">
+                    <div class="square">
+                      <div class="square"><div class="square">
+                      </div></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="bottom">
+              <div class="square">
+                <div class="square">
+                  <div class="square">
+                    <div class="square">
+                      <div class="square"><div class="square">
+                      </div></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="left">
+              <div class="square">
+                <div class="square">
+                  <div class="square">
+                    <div class="square">
+                      <div class="square"><div class="square">
+                      </div></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="right">
+              <div class="square">
+                <div class="square">
+                  <div class="square">
+                    <div class="square">
+                      <div class="square"><div class="square">
+                      </div></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+
+         </div>
+      </div>
+      
+      <div style="display:none;" id="myDiv" class="animate-bottom">
+
+
+
+
+
+
+
+
+
+<div class="h50 w100">
+
+   	<div class="h50 w80 fl " style="background: #464c4f;">
+   		<i class="fa fa-clock-o font20 pclw mrl100" aria-hidden="true" ></i>
+   		<span style="color:white;">2023-09-19</span>
+   		<i class="fa fa-bolt font20 pclw mrl10" aria-hidden="true"></i>
+   		<span style="color:white;">bapunager,ahmedbad</span>
+    </div>
+
+     <div class="h50 w20 fl" style="background:#464c4f;">
+   		<i class="fa fa-facebook blk font20 mrl10" aria-hidden="true" ></i>
+   		<i class="fa fa-twitter blk font20 mrl10" aria-hidden="true" ></i>
+   		<i class="fa fa-instagram blk font20 mrl10" aria-hidden="true" ></i>
+   	</div>
+</div>
+
+
+
+<div class="h100 w100  ">
+	<div class="h100 w30  fl" >
+   		<img src="1.png" class="mrl100 mt20" >
+     </div>
+
+        <div class="h100 w70 fl">
+    <a href="index.html">  <span class="blk1  fl font10 mt30 " >HOME</span></a>
+    <a href="Blog.html">    <span class="blk1 fl font10 mt30 mrl20" >BLOG</span></a>
+    <a href="SHOPLIST.html">    <span class="blk1 fl font10 mt30 mrl20" >SHOP LIST</span></a>
+    <a href="ACCOUNT.html"> <span class="blk1 fl font10 mt30 mrl20" >ACCOUNT</span></a>
+    <a href="CART.html">    <span class="blk1 fl font10 mt30 mrl20" >CART</span></a>
+    <a href="CHECKOUT.html">   <span class="blk1 fl font10 mt30 mrl20" >CHECKOUT</span></a>
+        <span class="blk1 fl font10 mt30 mrl20" >DETAIL</span>
+    <a href="ABOUT US.html">   <span class="blk1 fl font10 mt30 mrl20" >ABOUT US</span></a>
+    <a href="CONTACT US.html">  <span class="blk1 fl font10 mt30 mrl20" >CONTACT US</span></a>
+        <i class="fa fa-search blk1 mrl30 mt30" aria-hidden="true"></i>
+       </div>
+
+</div>
+<div class="h150 w100" style="background: #464c4f"></div>
+<div class="h50  w100 " style="margin-top: -10px;">
+	 
+  <center>
+  <div class="h20 w15 clw">
+    <span class="font20 blk1 clw "> Home&nbsp; |</span>
+    <span class="font20 blk1 clw" style="color: #f75656">&nbsp;About Us</span>
+   </div>
+  </center>
+</div>
+
+<!-------------------------page --------------->
+
+<div class="h1000 w100">
+  <div class="h1000 w80 fl">
+    
+  <div class="h300 w70  mrl60">
+<div class="h300 w100 fl mrl60">
+  <div class="h300 w70 fl ">
+  <h2 class="mrl20 font30">Welcome to BlogMag</h2>
+  <p class="mrl20">
+   Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy<br> eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam<br>  voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Lorem ipsum<br>dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor<br>  invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos<br>  et accusam et justo duo dolores et ea rebum. At vero eos et accusam et justo duo<br>  dolores et ea rebum. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed<br>  diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,<br> sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.</p></div>
+   <div class="h300 w30 fl" style="background-image:url(51.jpg) ;background-size: cover;"></div>
+   </div>
+   </div>
+
+  <div class="h100 w80 mrl80">
+    <div class="h100 w90 mt20 "  style="background-image: url(52.jpg);background-size: cover ;"> </div>
+  </div>
+   
+
+
+<div class="h400 w100 mrl20 mt50">
+  
+  <p class="font20  mt10">OUR TEAM</p>
+  <div class="h275 w27 mrl10 fl" style="background-image:url(53.jpg); background-size: cover;background-position: center;">
+    <div class="w100 h225"></div>
+    <div class="w100 h50 tag"><span class="font30 mrl60 mt10 pclw">James Gray</span></div>
+  </div>
+
+<div class="h275 w27 clb fl mrl10 fl" style="background-image:url(54.jpg); background-size: cover;background-position: center;">
+    <div class="w100 h225"></div>
+    <div class="w100 h50 tag"><span class="font30 mrl60 mt10 pclw">James Gray</span></div>
+  </div>
+
+  <div class="h275 w27 clb mrl10 fl" style="background-image:url(55.jpg); background-size: cover;background-position: center;">
+    <div class="w100 h225"></div>
+    <div class="w100 h50 tag"><span class="font30 mrl60 mt10 pclw">James Gray</span></div>
+  </div>
+
+
+
+
+
+
+ </div>
+
+</div>
+   <div class="h1000 w20 fl" >
+    
+<div class="h300 w100" style="margin-left: -180px;"> 
+   <div class="h150 w100  " style="border-style: solid ;">
+   <P class="font20 mrl30">Soical link</P>
+   <i class="fa fa-facebook-official font30 mrl30" aria-hidden="true"></i>
+   <i class="fa fa-twitter font30 mrl20" aria-hidden="true"></i>
+   <i class="fa fa-instagram font30 mrl20" aria-hidden="true"></i>
+   <i class="fa fa-youtube-play font30 mrl20" aria-hidden="true"></i>
+   <i class="fa fa-telegram font30 mrl20" aria-hidden="true"></i> <br><br>
+   <i class="fa fa-copyright font30 mrl30" aria-hidden="true"></i>
+   <i class="fa fa-skype font30 mrl20" aria-hidden="true"></i>
+   <i class="fa fa-pinterest-square font30 mrl20" aria-hidden="true"></i>
+   <i class="fa fa-podcast font30 mrl20" aria-hidden="true"></i>
+   <i class="fa fa-book font30 mrl20" aria-hidden="true"></i></border>
+   </div> 
+
+  <div class="h300 w80 clb mrl30">
+   <iframe class="h300 w100" src=" https://hitechskillindia.in/"></iframe> </div>
+
+   <div class="h200 w100 mrl30 mt100 "> <P>Twitter</P>
+   <div class="h150 w90 font20" style="border-left: 5px solid ;">
+    <P>All the love as always. H</P>
+    <P>— Harry Styles. (@Harry_Styles) March 26, 2015</P>
+    
+
+
+   </div>
+  </div>
+   </div></div>
+
+</div>
+
+
+<!------------find in inst --------->
+
+<div class="h700 w100 mt-30">
+<div class="h700 w100 fl mt50 " style="background: url(2.png);background-size: cover;background-color: black;">
+   <center>
+      <h1 class="pclw font25">Find Us on Instagram<hr class="w20"></h1>
+   </center>
+   <div class="h200 w90 fl  mrl100">
+      <div class="h200 w15 clb fl" style="background-image: url(33.jpg);background-size: cover;"></div>
+      <div class="h200 w15 clb fl" style="background-image: url(34.jpg);background-size: cover;"></div>
+      <div class="h200 w15 clb fl" style="background-image: url(35.jpg);background-size: cover;"></div>
+      <div class="h200 w15 clb fl" style="background-image: url(36.jpg);background-size: cover;"></div>
+      <div class="h200 w15 clb fl" style="background-image: url(37.jpg);background-size: cover;"></div>
+      <div class="h200 w15 clb fl" style="background-image: url(38.jpg);background-size: cover;"></div>
+   </div>
+   <br>
+
+
+<div class="h300 w30 mt80 fl">
+
+    <h1 class=" font30 mt-20 pclw" style="margin-left: 80px">NewMag</h1>
+    <hr class="w70">
+    <center>
+       <p class="font10 mrl20 pclw">amet, consetetur sadipscing elitr, sed diam nonumy<br> eirmod tempor invidunt ut labore et dolore magna<br> aliquyam erat.</p>
+       
+    </center>
+    <i class="fa fa-facebook-official fl font30 mrl80 mt30 pclw " aria-hidden="true"></i>
+    <i class="fa fa-twitter fl mrl20 font30 mt30 pclw" aria-hidden="true"></i>
+    <i class="fa fa-instagram fl mrl20 font30 mt30 pclw" aria-hidden="true"></i>
+
+   </div>
+
+
+
+<div class="h400 w20  fl">
+   <h1 class="mrl30 mt50 pclw">Categories</h1>
+   <hr class="w90">
+   <span class="mrl20 pclw">Entertainment</span>
+   <br><br>
+   <span class="mrl20 pclw">Sports</span>
+   <br><br>
+   <span class="mrl20 pclw">Polictics</span>
+   <br><br>
+   <span class="mrl20 pclw">National</span>
+   <br><br>
+   <span class="mrl20 pclw">Blog</span>
+   <br><br>
+
+ </div>
+
+<div class="h400 w20  fl">
+   <h1 class="mrl30 mt50 pclw">Popular Tags</h1>
+   <hr class="w90">
+    <span class="mrl20 pclw">Entertainment</span>
+   <br><br>
+   <span class="mrl20 pclw">Sports</span>
+   <br><br>
+   <span class="mrl20 pclw">Polictics</span>
+   <br><br>
+   <span class="mrl20 pclw">National</span>
+   <br><br>
+   <span class="mrl20 pclw">Blog</span>
+   <br><br>
+</div>
+
+
+
+<div class="h400 w30  fl">
+   <h1 class="mrl30 mt50 pclw">Newsletter</h1>
+   <hr class="w90">
+   <span class="mrl20 pclw">Dont Miss Anything</span>
+   <br><br>
+    <span class="mrl20 pclw">Subscribe to our #newsletter</span>
+   <br><br>
+   <form>
+      <input class="h25 w70 mrl20 fl" type="text" placeholder="Enter Email">
+      <button style="background:red;border:none;color: white;"><i class="fa fa-paper-plane font25" aria-hidden="true"></i></button>
+
+   </form>
+</div>
+</div>
+</div>
+
+
+<script>
+   var myVar;
+   
+   function myFunction() {
+     myVar = setTimeout(showPage, 3000);
+   }
+   
+   function showPage() {
+     document.getElementById("loader").style.display = "none";
+     document.getElementById("myDiv").style.display = "block";
+   }
+   </script>
+     
+
+
+
+</body>
+</html>
+

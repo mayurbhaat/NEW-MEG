@@ -1,0 +1,265 @@
+
+ .blk{color: white;}  	
+.blk:hover{color: red}
+
+.blk1{color: black;}
+.blk1:hover{color: red;}
+
+.blk3{color: white;}
+.blk3:hover{color: #2c3847}
+
+.blk4{background: green;}
+.blk4:hover{background: #2c3847}
+
+.pbtn{color: white;}
+.pbtn:hover{color:#2c3847;}
+
+
+.btn{background: #256da1;}
+.btn:hover{background: #253140}
+
+.btn1{background: #912372;}
+.btn1:hover{background: #253140}
+
+.btn2{background:white;}
+.btn2:hover{background:#253140} }
+
+.img{height:400px;width:50%;background-size:110% 110%;transition: 2s; }
+.img:hover{background-size: 100% 100%;transition: 2s;}
+
+.sh{height: 100%;width: 100%;background:#0000007a}
+.sh:hover{height: 100%;width: 100%;background: #21216a4d;}
+
+.img2{height:400px;width:90%;background-size: 110% 110%;transition: 2s}
+.img2:hover{background-size: 100% 100%;transition: 2s}
+
+.s{background: #00000036;}
+
+
+.img3{height: 400px;width: 90%;background-size: 110% 110%;transition: 2s}
+.img3:hover{background-size: 100% 100%;transition: 2s}
+
+
+
+.zoom{height: 250px;width: 30%;background-size: 100% 100%;transition: 2s}
+.zoom:hover{background-size: 110% 110%;transition: 2s}
+
+
+.font15{font-size: 15px}
+.font20{font-size:20px}
+.font25{font-size:25px}
+.font30{font-size:30px}
+
+
+.h50{height: 50px}
+.h40{height: 40px}
+.h30{height: 30px}
+.h20{height: 20px}
+.h25{height: 25px}
+.h150{height: 150px}
+.h180{height: 180px}
+.h200{height: 200px}
+.h230{height: 230px}
+.h275{height: 275px}
+.h400{height: 400px}
+.h500{height: 500px}
+.h600{height: 600px}
+.h700{height: 700px}
+.h800{height: 800px}
+.h1000{height: 1000px}
+
+
+
+
+.h300{height: 300px}
+.h200{height: 200px}
+.h250{height: 250px}
+.h225{height: 225px}
+.h150{height: 150px}
+.h100{height: 100px}
+.h80{height: 80px}
+.h50{height: 50px}
+.w100{width: 100%}
+.w30{width: 30%}
+.w35{width: 35%}
+.w40{width: 40%}
+.w50{width: 50%}
+.w60{width: 60%}
+.w70{width: 70%}
+.w65{width: 65%}
+.w90{width: 90%}
+.w100{width: 100%}
+
+.w75{width: 75%}
+.w80{width: 80%}
+.w87{width: 87%}
+.w85{width: 85%}
+.w83{width: 83%}
+.w48{width: 48%}
+.w5{width: 5%}
+.w10{width: 10%}
+.w15{width: 15%}
+.w20{width: 20%}
+.w27{width: 27%}
+
+
+
+.pr30{position: relative;bottom: 30px}
+
+
+
+.fl{float: left;}
+.mt6{margin-top: 6px;}
+.mt7{margin-top: 7px;}
+.mt10{margin-top: 10px;}
+.mt20{margin-top: 20px}
+.mt30{margin-top: 30px}
+.mt40{margin-top: 40px}
+.mt50{margin-top: 50px}
+.mt60{margin-top: 60px}
+.mt70{margin-top: 70px}
+.mt80{margin-top: 80px}
+.mt90{margin-top: 90px}
+.mt100{margin-top: 100px}
+.mt110{margin-top: 110px}
+
+.mt-5{margin-top: -5px}
+.mt-10{margin-top: -10px}
+.mt-20{margin-top: -20px}
+.mt-25{margin-top: -25px}
+.mt-30{margin-top: -30px}
+
+
+.pclw{color: white;}
+.pclb{color: black;}
+.bs{box-shadow: 0px 0px 2px grey;}
+
+.tag{background-color:#ba1342	}
+
+
+
+
+
+
+.mb10{margin-bottom: 10px}
+.mb20{margin-bottom: 20px}
+.mb30{margin-bottom: 30px}
+.mb40{margin-bottom: 40px}
+.mb50{margin-bottom: 50px}
+.mb60{margin-bottom: 60px}
+.mb70{margin-bottom: 70px}
+.mb80{margin-bottom: 80px}
+.mb90{margin-bottom: 90px}
+.mb100{margin-bottom: 100px}
+
+
+.mr10{margin-right: 10px}
+.mr50{margin-right: 50px}
+.mr80{margin-right: 80px}
+.mr90{margin-right: 90px}
+.mr100{margin-right: 100px}
+
+
+
+
+
+.mrl-100{margin-left: 100px}
+
+
+
+.mrl10{margin-left: 10px}
+.mrl12{margin-left: 12px}
+.mrl15{margin-left: 15px}
+.mrl20{margin-left: 20px}
+.mrl30{margin-left: 30px}
+.mrl40{margin-left: 40px}
+.mrl45{margin-left: 45px}
+.mrl48{margin-left: 48px}
+.mrl50{margin-left: 50px}
+.mrl60{margin-left: 60px}
+.mrl70{margin-left: 70px}
+.mrl80{margin-left: 80px}
+.mrl90{margin-left: 90px}
+.mrl100{margin-left: 100px}
+.mrl120{margin-left: 120px}
+.mrl130{margin-left: 130px}
+.mrl140{margin-left: 140px}
+.mrl150{margin-left: 150px}
+.mrl160{margin-left: 160px}
+.mrl200{margin-left: 200px}
+.mrl250{margin-left: 250px}
+.mrl280{margin-left: 280px}
+.mrl300{margin-left: 300px}
+.mrl400{margin-left: 400px}
+.mrl500{margin-left: 500px}
+.mrl650{margin-left: 650px}
+.mrl700{margin-left: 700px}
+
+
+
+.hr3{color:white;}
+.hr3:hover{color:#f75656 ;}
+
+
+
+.clg{background: gold;}
+.clgn{background: green;}
+.clw{background: white;}
+.clb{background: black;}
+.clbe{background: blue;}
+.round{background: #de4754}
+
+.salebk{background: #3d4242}
+
+.w45{width: 45%}
+.w20{width: 20%}
+.mglt{margin-left: 10px}
+
+
+.boxnew{height:35px;width:18%;border: azure;color: white;}
+.boxhealth{height:35px;width:20%;border: azure;color: white;} 
+.boxFashion{height:35px;width:25%;border: azure;color: white;} 
+.boxmusic{height:35px;width:20%;border: azure;color: white;} 
+.boxsports{height:35px;width:20%;border: azure;color: white;} 
+.boxtrending{height:35px;width:25%;border: azure;color: white;} 
+
+.pagebtn{height: 50px;width: 5%;background-size: 1px}
+.pagebtn:hover{height: 50px;width: 5%;background-color: #2e332d}
+
+.pagebtn2{height: 40px;width: 3%;background-size: 1px;border: 1px solid black;}
+.pagebtn2:hover{height: 40px;width: 3%;background-color: #2e332d;color: white;border: 1px solid black;}
+
+btn=blue
+blk4=green
+btn1=pink
+
+
+
+.Buynew{height:40px;width:10%;color: red;} 
+.Buynew:hover{height:40px;width:10%;background: #f75656;color: white;}
+
+.addcart{height:40px;width:40%;color: #f75656;border-color:  #f75656;border-radius: 30px} 
+.addcart:hover{height:40px;width:40%;background: #f75656;color: white;}
+
+.login{height:40px;width:15%;color:white;background: #f75656;border:1px;} 
+.login:hover{height:40px;width:15%;background: #f75656;color: white;}
+
+.Applycupon{height:40px;color: #f75656;border-color:  #f75656} 
+.Applycupon:hover{height:40px;background: #f75656;color: white;}
+
+
+
+
+.proceed{height:40px;width:40%;color: #f75656;background: #f75656;color: white;} 
+.proceed:hover{height:40px;width:40%;background:rgb(224, 208, 204);color: white;}
+
+.bbox{height: 100%;width: 100%;background: linear-gradient(to top, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 10%, rgba(0, 0, 0, 0) 70%, rgba(0, 0, 0, 0) 100%);}
+
+.zoom:hover img{
+transform: rotate(15deg) scale(1.5);transition: 2s;
+}
+
+.send{height: 50px;width:15%;color:#de4754;border-color:#de4754 }
+.send:hover{height: 50px;width:15%;color: white;background-color: #de4754}
+
+.hide{overflow: hidden;}

@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="mymeg.css">
+        <style>
+         /* Center the loader */
+         .center {
+  position: absolute;
+  transform: translateX(-50%);
+  left: 50%;
+}
+
+.container {
+  height: 31.25em;
+  width: 21.87em;
+  margin-top: -325px;
+}
+
+.rope {
+  height: 13.62em;
+  width: 0.15em;
+  background-color: #ffffff;
+  animation: swing 2s infinite;
+}
+
+@keyframes swing {
+  50% {
+    transform: translateY(-4em);
+  }
+}
+
+.legs {
+  height: 1.12em;
+  width: 7.5em;
+  background-color: transparent;
+  box-shadow: 0 0 0 0.12em #140243, 0 0 0 1.06em #1b1676, 0 0 0 1.18em #140243;
+  top: 12.5em;
+  border-radius: 3.12em;
+}
+
+.boot-l,
+.boot-r {
+  height: 1.25em;
+  width: 2.5em;
+  background-color: #e32832;
+  position: absolute;
+  border: 0.12em solid #140243;
+  bottom: 1.12em;
+}
+
+.boot-l {
+  left: 1em;
+}
+
+.boot-r {
+  transform: rotateY(180deg);
+  left: 3.81em;
+}
+
+.boot-l:before,
+.boot-r:before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-bottom: 1.12em solid #140243;
+  border-left: 1.18em solid transparent;
+  bottom: 1.31em;
+  left: 1.46em;
+}
+
+.boot-l:after,
+.boot-r:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-bottom: 1.12em solid #e32832;
+  border-left: 1em solid transparent;
+  right: 0;
+  top: -0.93em;
+}
+
+.costume {
+  height: 6.25em;
+  width: 5.62em;
+  background: linear-gradient(
+    to right,
+    #1b1676 20%,
+    #e32832 20%,
+    #e32832 80%,
+    #1b1676 80%
+  );
+  border: 0.12em solid #140243;
+  top: 14.68em;
+}
+
+.spider {
+  height: 1.87em;
+  width: 0.93em;
+  background-color: #140243;
+  border-radius: 45%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: calc(50% + 0.93em);
+  left: 50%;
+}
+
+.s1,
+.s3 {
+  height: 7.5em;
+  width: 2.5em;
+  border-radius: 0 0 1.37em 1.37em;
+  border-bottom: 0.12em solid #140243;
+  position: absolute;
+}
+
+.s2,
+.s4 {
+  height: 7.5em;
+  width: 3.12em;
+  border-radius: 0 0 1.56em 1.56em;
+  border-bottom: 0.12em solid #140243;
+  position: absolute;
+}
+
+.s1,
+.s2,
+.s3,
+.s4 {
+  left: 50%;
+}
+
+.s1 {
+  bottom: 1.43em;
+}
+
+.s2 {
+  bottom: 0.93em;
+}
+
+.s3,
+.s4 {
+  transform: translateX(-50%) rotateX(180deg);
+}
+
+.s3 {
+  top: 1.43em;
+}
+
+.s4 {
+  top: 0.93em;
+}
+
+.belt {
+  height: 0.43em;
+  width: 5.87em;
+  background-color: #e32832;
+  border: 0.12em solid #140243;
+  top: -0.12em;
+}
+
+.hand-r,
+.hand-l {
+  height: 8.12em;
+  background: linear-gradient(
+    #e32832 4.6em,
+    #140243 4.6em,
+    #140243 4.75em,
+    #1b1676 4.75em,
+    #1b1676 8.12em
+  );
+  width: 1.12em;
+  border: 0.12em solid #140243;
+  border-radius: 1.25em;
+  position: absolute;
+  transform-origin: bottom;
+  bottom: -0.12em;
+}
+
+.hand-r {
+  right: -0.75em;
+  transform: rotate(-22deg);
+}
+
+.hand-l {
+  left: -0.75em;
+  transform: rotate(22deg);
+}
+
+.neck {
+  height: 0.37em;
+  width: 1.25em;
+  background-color: #e32832;
+  bottom: -0.62em;
+  border: 0.12em solid #140243;
+}
+
+.mask {
+  height: 4.65em;
+  width: 4.06em;
+  background-color: #e32832;
+  border-radius: 50% 50% 50% 50% / 54% 54% 46% 46%;
+  border: 0.12em solid #140243;
+  top: 6.56em;
+}
+
+.eye-l,
+.eye-r {
+  height: 0.68em;
+  width: 1.37em;
+  background-color: #ffffff;
+  border-radius: 1.37em 1.37em 0 0;
+  border: 0.12em solid #140243;
+  position: absolute;
+  top: 2.1em;
+}
+
+.eye-l {
+  left: 0.3em;
+}
+
+.eye-r {
+  right: 0.3em;
+}
+
+.cover {
+  height: 3.12em;
+  width: 0.15em;
+  background-color: #ffffff;
+  bottom: 8.12em;
+}
+
+@media screen and (min-width: 600px) {
+  .container {
+    font-size: 20px;
+  }
+}
+         
+         @-webkit-keyframes spin {
+           0% { -webkit-transform: rotate(0deg); }
+           100% { -webkit-transform: rotate(360deg); }
+         }
+         
+         @keyframes spin {
+           0% { transform: rotate(0deg); }
+           100% { transform: rotate(360deg); }
+         }
+         
+         /* Add animation to "page content" */
+         .animate-bottom {
+           position: relative;
+           -webkit-animation-name: animatebottom;
+           -webkit-animation-duration: 1s;
+           animation-name: animatebottom;
+           animation-duration: 1s
+         }
+         
+         @-webkit-keyframes animatebottom {
+           from { bottom:-100px; opacity:0 } 
+           to { bottom:0px; opacity:1 }
+         }
+         
+         @keyframes animatebottom { 
+           from{ bottom:-100px; opacity:0 } 
+           to{ bottom:0; opacity:1 }
+         }
+         
+         #myDiv {
+           display: none;
+          
+         }
+         .my{
+          background-color: black;height: 775px;width: 100%;
+         }
+         </style>
+
+
+
+
+</head>
+
+
+   <body onload="myFunction()" style="margin:0;">
+
+      <div id="loader" >
+        <div class="my">
+         <div class="container center" style="margin-top: 10px;">
+            <div class="rope center">
+              <div class="legs center">
+                <div class="boot-l"></div>
+                <div class="boot-r"></div>
+              </div>
+              <div class="costume center">
+                <div class="spider">
+                  <div class="s1 center"></div>
+                  <div class="s2 center"></div>
+                  <div class="s3"></div>
+                  <div class="s4"></div>
+                </div>
+                <div class="belt center"></div>
+                <div class="hand-r"></div>
+                <div class="hand-l"></div>
+                <div class="neck center"></div>
+                <div class="mask center">
+                  <div class="eye-l"></div>
+                  <div class="eye-r"></div>
+                </div>
+                <div class="cover center"></div>
+              </div>
+          </div></div>
+        </div>
+      </div>
+      
+      <div style="display:none;" id="myDiv" class="animate-bottom">
+
+
+
+
+
+
+
+
+<div class="h50 w100">
+
+   	<div class="h50 w80 fl " style="background: #464c4f;">
+   		<i class="fa fa-clock-o font20 pclw mrl100" aria-hidden="true" ></i>
+   		<span style="color:white;">2023-09-19</span>
+   		<i class="fa fa-bolt font20 pclw mrl10" aria-hidden="true"></i>
+   		<span style="color:white;">bapunager,ahmedbad</span>
+    </div>
+
+     <div class="h50 w20 fl" style="background:#464c4f;">
+   		<i class="fa fa-facebook blk font20 mrl10" aria-hidden="true" ></i>
+   		<i class="fa fa-twitter blk font20 mrl10" aria-hidden="true" ></i>
+   		<i class="fa fa-instagram blk font20 mrl10" aria-hidden="true" ></i>
+   	</div>
+</div>
+
+
+
+<div class="h100 w100  ">
+	<div class="h100 w30  fl" >
+   		<img src="1.png" class="mrl100 mt20" >
+     </div>
+
+       <div class="h100 w70 fl">
+      <a href="index.html">  <span class="blk1  fl font10 mt30 " >HOME</span></a>
+      <a href="Blog.html"> <span class="blk1 fl font10 mt30 mrl20" >BLOG</span></a>
+      <a href="SHOPLIST.html">   <span class="blk1 fl font10 mt30 mrl20" >SHOP LIST</span></a>
+      <a href="ACCOUNT.html"> <span class="blk1 fl font10 mt30 mrl20" >ACCOUNT</span></a>
+      <a href="CART.html"> <span class="blk1 fl font10 mt30 mrl20" >CART</span></a>
+      <a href="CHECKOUT.html">  <span class="blk1 fl font10 mt30 mrl20" >CHECKOUT</span></a>
+         <span class="blk1 fl font10 mt30 mrl20" >DETAIL</span>
+    <a href="ABOUT US.html">   <span class="blk1 fl font10 mt30 mrl20" >ABOUT US</span></a>
+    <a href="CONTACT US.html">  <span class="blk1 fl font10 mt30 mrl20" >CONTACT US</span></a>
+        <i class="fa fa-search blk1 mrl30 mt30" aria-hidden="true"></i>
+       </div>
+</div>
+<div class="h150 w100" style="background: #464c4f"></div>
+<div class="h50  w100 " style="margin-top: -10px;">
+	 
+  <center>
+  <div class="h20 w15 clw">
+    <span class="font20 blk1 clw "> Home&nbsp; |</span>
+    <span class="font20 blk1 clw ">&nbsp;Shop&nbsp; |</span>
+    <span class="font20 blk1 clw" style="color: #f75656">&nbsp;Cart </span>
+   </div>
+  </center>
+</div>	
+
+<!----------------table work------->
+<div class="h150 w100 ">
+<table class="w80 " border="1px">
+	<tr>
+	<th>      </th>	
+	<th>Product</th>
+	<th>Price</th>
+	<th>Quantity</th>
+	<th>Total</th>
+    </tr>
+
+    <tr>
+    <th>   *  </th>	
+	<th>Wall Color </th>
+	<th>$329.00</th>
+  <th><button class="w50">Quantity</button>
+      <input type="number" class="Quantity-input" min="0" max="50" placeholder="no."></th>
+   <th>$329.00</th>   
+		</tr>
+
+  <tr><th>Coupon:
+     <input class="w50" type="text" name="" placeholder="Coupon" >      </th>
+   <th><button class="h30 Applycupon" style="border: 1px solid red;color: red;">Apply coupon</button></th>
+   <th><button class="h30" style="border: 1px solid red;color: red;cursor: no-drop;" >Update cart</button></th>
+   </tr> 
+  </table>
+  </div>
+
+  <div class="h400 w100">
+    <p class="font30 mrl80">Cart Totals<hr class="w90"></p>
+
+    <table class="w40 mrl80" border="1px">
+      <tr>
+        <th>Product</th>
+        <th>Total</th>
+      </tr>
+  
+     <tr>
+        <th>Wall Color  × 1</th>
+        <th>  $329.00</th>
+      </tr>
+
+     <tr>
+        <th>Subtotal</th>
+        <th>  <tr>
+        <th>Shipping</th>
+        <th> Enter your address to view shipping options.</th>
+      </tr>
+</th>
+      </tr> 
+  
+     <tr>
+        <th>Shipping</th>
+        <th> $329.00</th>
+      </tr>
+    </table>
+   <p class="mrl80">Your personal data will be used to process your order, support your experience throughout this website, and for other purposes described in our privacy policy.</p>
+
+   <button class="proceed mrl80">Proceed To Checkout</button>
+  </div>
+
+<!------------find in inst --------->
+
+<div class="h700 w100">
+<div class="h700 w100 fl mt50 " style="background: url(2.png);background-size: cover;background-color: black;">
+   <center>
+      <h1 class="pclw font25">Find Us on Instagram<hr class="w20"></h1>
+   </center>
+   <div class="h200 w90 fl  mrl100">
+      <div class="h200 w15 clb fl" style="background-image: url(33.jpg);background-size: cover;"></div>
+      <div class="h200 w15 clb fl" style="background-image: url(34.jpg);background-size: cover;"></div>
+      <div class="h200 w15 clb fl" style="background-image: url(35.jpg);background-size: cover;"></div>
+      <div class="h200 w15 clb fl" style="background-image: url(36.jpg);background-size: cover;"></div>
+      <div class="h200 w15 clb fl" style="background-image: url(37.jpg);background-size: cover;"></div>
+      <div class="h200 w15 clb fl" style="background-image: url(38.jpg);background-size: cover;"></div>
+   </div>
+   <br>
+
+
+<div class="h300 w30 mt80 fl">
+
+    <h1 class=" font30 mt-20 pclw" style="margin-left: 80px">NewMag</h1>
+    <hr class="w70">
+    <center>
+       <p class="font10 mrl20 pclw">amet, consetetur sadipscing elitr, sed diam nonumy<br> eirmod tempor invidunt ut labore et dolore magna<br> aliquyam erat.</p>
+       
+    </center>
+    <i class="fa fa-facebook-official fl font30 mrl80 mt30 pclw " aria-hidden="true"></i>
+    <i class="fa fa-twitter fl mrl20 font30 mt30 pclw" aria-hidden="true"></i>
+    <i class="fa fa-instagram fl mrl20 font30 mt30 pclw" aria-hidden="true"></i>
+
+   </div>
+
+
+
+<div class="h400 w20  fl">
+   <h1 class="mrl30 mt50 pclw">Categories</h1>
+   <hr class="w90">
+   <span class="mrl20 pclw">Entertainment</span>
+   <br><br>
+   <span class="mrl20 pclw">Sports</span>
+   <br><br>
+   <span class="mrl20 pclw">Polictics</span>
+   <br><br>
+   <span class="mrl20 pclw">National</span>
+   <br><br>
+   <span class="mrl20 pclw">Blog</span>
+   <br><br>
+
+ </div>
+
+<div class="h400 w20  fl">
+   <h1 class="mrl30 mt50 pclw">Popular Tags</h1>
+   <hr class="w90">
+    <span class="mrl20 pclw">Entertainment</span>
+   <br><br>
+   <span class="mrl20 pclw">Sports</span>
+   <br><br>
+   <span class="mrl20 pclw">Polictics</span>
+   <br><br>
+   <span class="mrl20 pclw">National</span>
+   <br><br>
+   <span class="mrl20 pclw">Blog</span>
+   <br><br>
+</div>
+
+
+
+<div class="h400 w30  fl">
+   <h1 class="mrl30 mt50 pclw">Newsletter</h1>
+   <hr class="w90">
+   <span class="mrl20 pclw">Dont Miss Anything</span>
+   <br><br>
+    <span class="mrl20 pclw">Subscribe to our #newsletter</span>
+   <br><br>
+   <form>
+      <input class="h25 w70 mrl20 fl" type="text" placeholder="Enter Email">
+      <button style="background:red;border:none;color: white;"><i class="fa fa-paper-plane font25" aria-hidden="true"></i></button>
+
+   </form>
+</div>
+</div>
+</div>
+
+
+</div>
+
+<script>
+var myVar;
+
+function myFunction() {
+  myVar = setTimeout(showPage, 3000);
+}
+
+function showPage() {
+  document.getElementById("loader").style.display = "none";
+  document.getElementById("myDiv").style.display = "block";
+}
+</script>
+
+
+
+</body>
+</html>

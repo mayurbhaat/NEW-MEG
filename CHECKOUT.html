@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="mymeg.css">
+        <style>
+          /* Center the loader */
+
+          .loader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 10;
+  width: 160px;
+  height: 100px;
+  margin-left: -80px;
+  margin-top: -50px;
+  border-radius: 5px;
+  background: #1e3f57;
+  animation: dot1_ 3s cubic-bezier(0.55,0.3,0.24,0.99) infinite;
+}
+
+.loader:nth-child(2) {
+  z-index: 11;
+  width: 150px;
+  height: 90px;
+  margin-top: -45px;
+  margin-left: -75px;
+  border-radius: 3px;
+  background: #3c517d;
+  animation-name: dot2_;
+}
+
+.loader:nth-child(3) {
+  z-index: 12;
+  width: 40px;
+  height: 20px;
+  margin-top: 50px;
+  margin-left: -20px;
+  border-radius: 0 0 5px 5px;
+  background: #6bb2cd;
+  animation-name: dot3_;
+}
+
+@keyframes dot1_ {
+  3%,97% {
+    width: 160px;
+    height: 100px;
+    margin-top: -50px;
+    margin-left: -80px;
+  }
+
+  30%,36% {
+    width: 80px;
+    height: 120px;
+    margin-top: -60px;
+    margin-left: -40px;
+  }
+
+  63%,69% {
+    width: 40px;
+    height: 80px;
+    margin-top: -40px;
+    margin-left: -20px;
+  }
+}
+
+@keyframes dot2_ {
+  3%,97% {
+    height: 90px;
+    width: 150px;
+    margin-left: -75px;
+    margin-top: -45px;
+  }
+
+  30%,36% {
+    width: 70px;
+    height: 96px;
+    margin-left: -35px;
+    margin-top: -48px;
+  }
+
+  63%,69% {
+    width: 32px;
+    height: 60px;
+    margin-left: -16px;
+    margin-top: -30px;
+  }
+}
+
+@keyframes dot3_ {
+  3%,97% {
+    height: 20px;
+    width: 40px;
+    margin-left: -20px;
+    margin-top: 50px;
+  }
+
+  30%,36% {
+    width: 8px;
+    height: 8px;
+    margin-left: -5px;
+    margin-top: 49px;
+    border-radius: 8px;
+  }
+
+  63%,69% {
+    width: 16px;
+    height: 4px;
+    margin-left: -8px;
+    margin-top: -37px;
+    border-radius: 10px;
+  }
+}
+      
+          @-webkit-keyframes spin {
+            0% { -webkit-transform: rotate(0deg); }
+            100% { -webkit-transform: rotate(360deg); }
+          }
+          
+          @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+          }
+          
+          /* Add animation to "page content" */
+          .animate-bottom {
+            position: relative;
+            -webkit-animation-name: animatebottom;
+            -webkit-animation-duration: 1s;
+            animation-name: animatebottom;
+            animation-duration: 1s
+          }
+          
+          @-webkit-keyframes animatebottom {
+            from { bottom:-100px; opacity:0 } 
+            to { bottom:0px; opacity:1 }
+          }
+          
+          @keyframes animatebottom { 
+            from{ bottom:-100px; opacity:0 } 
+            to{ bottom:0; opacity:1 }
+          }
+          
+          #myDiv {
+            display: none;
+            
+          }
+
+          .my{
+            background-color: rgb(158, 159, 175);height: 775px;width: 100%;
+          }
+
+
+
+          </style>
+
+</head>
+<body onload="myFunction()" style="margin:0;">
+
+  <div id="loader">
+
+    <div class="my">
+    <div class="container" >
+      <div class="loader"></div>
+      <div class="loader"></div>
+      <div class="loader"></div>
+    </div>
+    
+
+
+
+
+
+
+
+  </div>
+  </div>
+  
+  <div style="display:none;" id="myDiv" class="animate-bottom">
+
+
+
+
+
+  <div class="h50 w100">
+
+    <div class="h50 w80 fl " style="background: #464c4f;">
+      <i class="fa fa-clock-o font20 pclw mrl100" aria-hidden="true" ></i>
+      <span style="color:white;">2023-09-19</span>
+      <i class="fa fa-bolt font20 pclw mrl10" aria-hidden="true"></i>
+      <span style="color:white;">bapunager,ahmedbad</span>
+    </div>
+
+     <div class="h50 w20 fl" style="background:#464c4f;">
+      <i class="fa fa-facebook blk font20 mrl10" aria-hidden="true" ></i>
+      <i class="fa fa-twitter blk font20 mrl10" aria-hidden="true" ></i>
+      <i class="fa fa-instagram blk font20 mrl10" aria-hidden="true" ></i>
+    </div>
+</div>
+
+
+
+<div class="h100 w100  ">
+  <div class="h100 w30  fl" >
+      <img src="1.png" class="mrl100 mt20" >
+     </div>
+
+       <div class="h100 w70 fl">
+    <a href="index.html">  <span class="blk1  fl font10 mt30 " >HOME</span></a>
+    <a href="Blog.html">  <span class="blk1 fl font10 mt30 mrl20" >BLOG</span></a>
+    <a href="SHOPLIST.html">  <span class="blk1 fl font10 mt30 mrl20" >SHOP LIST</span></a>
+    <a href="ACCOUNT.html"> <span class="blk1 fl font10 mt30 mrl20" >ACCOUNT</span></a>
+    <a href="CART.html">  <span class="blk1 fl font10 mt30 mrl20" >CART</span></a>
+    <a href="CHECKOUT.html">  <span class="blk1 fl font10 mt30 mrl20" >CHECKOUT</span></a>
+      <span class="blk1 fl font10 mt30 mrl20" >DETAIL</span>
+    <a href="ABOUT US.html">   <span class="blk1 fl font10 mt30 mrl20" >ABOUT US</span></a>
+    <a href="CONTACT US.html">  <span class="blk1 fl font10 mt30 mrl20" >CONTACT US</span></a>
+        <i class="fa fa-search blk1 mrl30 mt30" aria-hidden="true"></i>
+       </div>
+
+</div>
+<div class="h150 w100" style="background: #464c4f"></div>
+<div class="h50  w100 " style="margin-top: -10px;">
+   
+  <center>
+  <div class="h20 w20 clw">
+    <span class="font20 blk1 clw "> Home&nbsp; |</span>
+    <span class="font20 blk1 clw ">&nbsp;Shop&nbsp; |</span>
+    <span class="font20 blk1 clw" style="color: #f75656">&nbsp;Checkout </span>
+   </div>
+  </center>
+</div>  
+<div class="h150 w100">
+  <div class="h100 w90 mrl90 fl" style="border: 1px solid black;">
+  <span class="font30 mt30 fl ">Have a coupon?</span>
+  <span class="font30 mt30 mrl700 fl" style="color:red;cursor: no-drop;">Click here to enter your code</span>
+  </div>
+</div>
+
+<!------------from------------->
+
+<div class="h500 w100 ">
+  <span class="font30 mrl100">Billing details<hr class="w85"></span>
+
+
+<div class="h500 w50 fl ">
+  <span class="font20 mrl100">First Name: *</span>
+  <span class="font20 mrl160">Last Name: *</span>
+   <input class="mt10 h30 w35 mrl100" type="text" name="">
+  <input class="mt10 h30 w35  mrl10" type="text" name=""><br>
+
+  <p class="mt20 font20 mrl100">Company Name (optional):</p>
+  <input class="h30 w75 mrl100" type="text" name="">
+
+  <p class="mt20 font20 mrl100">Country: *</p>
+  
+  <select class="h40 w75 mrl100">
+    <option>Argentina</option>
+    <option>Bulgira</option>
+    <option>Canada</option>
+    <option>Denmark</option>
+    <option>Egypt</option>
+    <option>Germany</option>
+    <option>Hungary</option>
+  </select>
+ 
+  <p class="font20 mrl100 fl">Street Address: *</p>
+  <p class="font20 mrl130 fl">Town/City: *</p>
+   <input class="h30 w35 mrl100" type="text" name="">
+  <input class="h30 w35  mrl10" type="text" name="">
+
+<p class="mt20 font20 mrl100">Postcode / ZIP (optional):</p>
+  <input class="h30 w75 mrl100" type="text" name="">
+
+</div>  
+
+
+<div class="h500 w50 fl ">
+  <p class="font20 mrl30">Phone No.: *</p> 
+  <input class="h30 w80 mrl30 mt-20" type="number" name="">
+
+   <p class="font20 mrl30">Email Address: *</p> 
+  <input class="h30 w80 mrl30 mt-20" type="number" name=""><br>
+
+ <input class="mrl30 mt20" type="checkbox" name="">
+ <span class="font20">Ship to a different address?</span>
+
+ <p class="font20 mrl30">Order notes (optional):</p>
+ <textarea class="h200 w80 mrl30 mt-10" type="text" name="" placeholder="Notes About your Order e.g. Spacial notes for delivery"></textarea>
+</div>  
+</div>
+
+<!-------------------order-------------------->
+
+<div class="h400 w100 mt100">
+  
+    <div class="h300 w100">
+    <p class="font30 mrl80">Order<hr class="w90"></p>
+
+    <table class="w40 mrl80" border="1px">
+      <tr>
+        <th>Product</th>
+        <th>Total</th>
+      </tr>
+  
+     <tr>
+        <th>Wall Color  × 1</th>
+        <th>  $329.00</th>
+      </tr>
+
+     <tr>
+        <th>Subtotal</th>
+        <th>  <tr>
+        <th>Shipping</th>
+        <th> Enter your address to view shipping options.</th>
+      </tr>
+</th>
+      </tr> 
+  
+     <tr>
+        <th>Shipping</th>
+        <th> $329.00</th>
+      </tr>
+    </table>
+   <p class="mrl80">Your personal data will be used to process your order, support your experience throughout this website, and for other purposes described in our privacy policy.</p>
+
+   <button class="proceed mrl80">Place Order</button>
+  </div>
+</div>  
+
+<!------------------find inst --------------> 
+
+ 
+<div class="h700 w100">
+<div class="h700 w100 fl mt50 " style="background: url(2.png);background-size: cover;background-color: black;">
+   <center>
+      <h1 class="pclw font25">Find Us on Instagram<hr class="w20"></h1>
+   </center>
+   <div class="h200 w90 fl  mrl100">
+      <div class="h200 w15 clb fl" style="background-image: url(33.jpg);background-size: cover;"></div>
+      <div class="h200 w15 clb fl" style="background-image: url(34.jpg);background-size: cover;"></div>
+      <div class="h200 w15 clb fl" style="background-image: url(35.jpg);background-size: cover;"></div>
+      <div class="h200 w15 clb fl" style="background-image: url(36.jpg);background-size: cover;"></div>
+      <div class="h200 w15 clb fl" style="background-image: url(37.jpg);background-size: cover;"></div>
+      <div class="h200 w15 clb fl" style="background-image: url(38.jpg);background-size: cover;"></div>
+   </div>
+   <br>
+
+
+<div class="h300 w30 mt80 fl">
+
+    <h1 class=" font30 mt-20 pclw" style="margin-left: 80px">NewMag</h1>
+    <hr class="w70">
+    <center>
+       <p class="font10 mrl20 pclw">amet, consetetur sadipscing elitr, sed diam nonumy<br> eirmod tempor invidunt ut labore et dolore magna<br> aliquyam erat.</p>
+       
+    </center>
+    <i class="fa fa-facebook-official fl font30 mrl80 mt30 pclw " aria-hidden="true"></i>
+    <i class="fa fa-twitter fl mrl20 font30 mt30 pclw" aria-hidden="true"></i>
+    <i class="fa fa-instagram fl mrl20 font30 mt30 pclw" aria-hidden="true"></i>
+
+   </div>
+
+
+
+<div class="h400 w20  fl">
+   <h1 class="mrl30 mt50 pclw">Categories</h1>
+   <hr class="w90">
+   <span class="mrl20 pclw">Entertainment</span>
+   <br><br>
+   <span class="mrl20 pclw">Sports</span>
+   <br><br>
+   <span class="mrl20 pclw">Polictics</span>
+   <br><br>
+   <span class="mrl20 pclw">National</span>
+   <br><br>
+   <span class="mrl20 pclw">Blog</span>
+   <br><br>
+
+ </div>
+
+<div class="h400 w20  fl">
+   <h1 class="mrl30 mt50 pclw">Popular Tags</h1>
+   <hr class="w90">
+    <span class="mrl20 pclw">Entertainment</span>
+   <br><br>
+   <span class="mrl20 pclw">Sports</span>
+   <br><br>
+   <span class="mrl20 pclw">Polictics</span>
+   <br><br>
+   <span class="mrl20 pclw">National</span>
+   <br><br>
+   <span class="mrl20 pclw">Blog</span>
+   <br><br>
+</div>
+
+
+
+<div class="h400 w30  fl">
+   <h1 class="mrl30 mt50 pclw">Newsletter</h1>
+   <hr class="w90">
+   <span class="mrl20 pclw">Dont Miss Anything</span>
+   <br><br>
+    <span class="mrl20 pclw">Subscribe to our #newsletter</span>
+   <br><br>
+   <form>
+      <input class="h25 w70 mrl20 fl" type="text" placeholder="Enter Email">
+      <button style="background:red;border:none;color: white;"><i class="fa fa-paper-plane font25" aria-hidden="true"></i></button>
+
+   </form>
+</div>
+</div>
+</div>
+
+
+</div>
+
+<script>
+var myVar;
+
+function myFunction() {
+  myVar = setTimeout(showPage, 3000);
+}
+
+function showPage() {
+  document.getElementById("loader").style.display = "none";
+  document.getElementById("myDiv").style.display = "block";
+}
+</script>
+  
+  
+</body>
+</html>

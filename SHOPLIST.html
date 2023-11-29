@@ -1,0 +1,900 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="mymeg.css">
+
+		<style>
+			/* Center the loader */
+		.macbook {
+  width: 150px;
+  height: 96px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin: -85px 0 0 -78px;
+  perspective: 500px;
+}
+
+.shadow {
+  position: absolute;
+  width: 60px;
+  height: 0px;
+  left: 40px;
+  top: 160px;
+  transform: rotateX(80deg) rotateY(0deg) rotateZ(0deg);
+  box-shadow: 0 0 60px 40px rgba(0,0,0,0.3);
+  animation: shadow infinite 7s ease;
+}
+
+.inner {
+  z-index: 20;
+  position: absolute;
+  width: 150px;
+  height: 96px;
+  left: 0;
+  top: 0;
+  transform-style: preserve-3d;
+  transform: rotateX(-20deg) rotateY(0deg) rotateZ(0deg);
+  animation: rotate infinite 7s ease;
+}
+
+.screen {
+  width: 150px;
+  height: 96px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  border-radius: 7px;
+  background: #ddd;
+  transform-style: preserve-3d;
+  transform-origin: 50% 93px;
+  transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  animation: lid-screen infinite 7s ease;
+  background-image: linear-gradient(45deg, rgba(0,0,0,0.34) 0%,rgba(0,0,0,0) 100%);
+  background-position: left bottom;
+  background-size: 300px 300px;
+  box-shadow: inset 0 3px 7px rgba(255,255,255,0.5);
+}
+
+.screen .logo {
+  position: absolute;
+  width: 20px;
+  height: 24px;
+  left: 50%;
+  top: 50%;
+  margin: -12px 0 0 -10px;
+  transform: rotateY(180deg) translateZ(0.1px);
+}
+
+.screen .face-one {
+  width: 150px;
+  height: 96px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  border-radius: 7px;
+  background: #d3d3d3;
+  transform: translateZ(2px);
+  background-image: linear-gradient(45deg,rgba(0,0,0,0.24) 0%,rgba(0,0,0,0) 100%);
+}
+
+.screen .face-one .camera {
+  width: 3px;
+  height: 3px;
+  border-radius: 100%;
+  background: #000;
+  position: absolute;
+  left: 50%;
+  top: 4px;
+  margin-left: -1.5px;
+}
+
+.screen .face-one .display {
+  width: 130px;
+  height: 74px;
+  margin: 10px;
+  background-color: #000;
+  background-size: 100% 100%;
+  border-radius: 1px;
+  position: relative;
+  box-shadow: inset 0 0 2px rgba(0,0,0,1);
+}
+
+.screen .face-one .display .shade {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 130px;
+  height: 74px;
+  background: linear-gradient(-135deg, rgba(255,255,255,0) 0%,rgba(255,255,255,0.1) 47%,rgba(255,255,255,0) 48%);
+  animation: screen-shade infinite 7s ease;
+  background-size: 300px 200px;
+  background-position: 0px 0px;
+}
+
+.screen .face-one span {
+  position: absolute;
+  top: 85px;
+  left: 57px;
+  font-size: 6px;
+  color: #666
+}
+
+.macbody {
+  width: 150px;
+  height: 96px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  border-radius: 7px;
+  background: #cbcbcb;
+  transform-style: preserve-3d;
+  transform-origin: 50% bottom;
+  transform: rotateX(-90deg);
+  animation: lid-macbody infinite 7s ease;
+  background-image: linear-gradient(45deg, rgba(0,0,0,0.24) 0%,rgba(0,0,0,0) 100%);
+}
+
+.macbody .face-one {
+  width: 150px;
+  height: 96px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  border-radius: 7px;
+  transform-style: preserve-3d;
+  background: #dfdfdf;
+  animation: lid-keyboard-area infinite 7s ease;
+  transform: translateZ(-2px);
+  background-image: linear-gradient(30deg, rgba(0,0,0,0.24) 0%,rgba(0,0,0,0) 100%);
+}
+
+.macbody .touchpad {
+  width: 40px;
+  height: 31px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  border-radius: 4px;
+  margin: -44px 0 0 -18px;
+  background: #cdcdcd;
+  background-image: linear-gradient(30deg, rgba(0,0,0,0.24) 0%,rgba(0,0,0,0) 100%);
+  box-shadow: inset 0 0 3px #888;
+}
+
+.macbody .keyboard {
+  width: 130px;
+  height: 45px;
+  position: absolute;
+  left: 7px;
+  top: 41px;
+  border-radius: 4px;
+  transform-style: preserve-3d;
+  background: #cdcdcd;
+  background-image: linear-gradient(30deg, rgba(0,0,0,0.24) 0%,rgba(0,0,0,0) 100%);
+  box-shadow: inset 0 0 3px #777;
+  padding: 0 0 0 2px;
+}
+
+.keyboard .key {
+  width: 6px;
+  height: 6px;
+  background: #444;
+  float: left;
+  margin: 1px;
+  transform: translateZ(-2px);
+  border-radius: 2px;
+  box-shadow: 0 -2px 0 #222;
+  animation: keys infinite 7s ease;
+}
+
+.key.space {
+  width: 45px;
+}
+
+.key.f {
+  height: 3px;
+}
+
+.macbody .pad {
+  width: 5px;
+  height: 5px;
+  background: #333;
+  border-radius: 100%;
+  position: absolute;
+}
+
+.pad.one {
+  left: 20px;
+  top: 20px;
+}
+
+.pad.two {
+  right: 20px;
+  top: 20px;
+}
+
+.pad.three {
+  right: 20px;
+  bottom: 20px;
+}
+
+.pad.four {
+  left: 20px;
+  bottom: 20px;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotateX(-20deg) rotateY(0deg) rotateZ(0deg);
+  }
+
+  5% {
+    transform: rotateX(-20deg) rotateY(-20deg) rotateZ(0deg);
+  }
+
+  20% {
+    transform: rotateX(30deg) rotateY(200deg) rotateZ(0deg);
+  }
+
+  25% {
+    transform: rotateX(-60deg) rotateY(150deg) rotateZ(0deg);
+  }
+
+  60% {
+    transform: rotateX(-20deg) rotateY(130deg) rotateZ(0deg);
+  }
+
+  65% {
+    transform: rotateX(-20deg) rotateY(120deg) rotateZ(0deg);
+  }
+
+  80% {
+    transform: rotateX(-20deg) rotateY(375deg) rotateZ(0deg);
+  }
+
+  85% {
+    transform: rotateX(-20deg) rotateY(357deg) rotateZ(0deg);
+  }
+
+  87% {
+    transform: rotateX(-20deg) rotateY(360deg) rotateZ(0deg);
+  }
+
+  100% {
+    transform: rotateX(-20deg) rotateY(360deg) rotateZ(0deg);
+  }
+}
+
+@keyframes lid-screen {
+  0% {
+    transform: rotateX(0deg);
+    background-position: left bottom;
+  }
+
+  5% {
+    transform: rotateX(50deg);
+    background-position: left bottom;
+  }
+
+  20% {
+    transform: rotateX(-90deg);
+    background-position: -150px top;
+  }
+
+  25% {
+    transform: rotateX(15deg);
+    background-position: left bottom;
+  }
+
+  30% {
+    transform: rotateX(-5deg);
+    background-position: right top;
+  }
+
+  38% {
+    transform: rotateX(5deg);
+    background-position: right top;
+  }
+
+  48% {
+    transform: rotateX(0deg);
+    background-position: right top;
+  }
+
+  90% {
+    transform: rotateX(0deg);
+    background-position: right top;
+  }
+
+  100% {
+    transform: rotateX(0deg);
+    background-position: right center;
+  }
+}
+
+@keyframes lid-macbody {
+  0% {
+    transform: rotateX(-90deg);
+  }
+
+  50% {
+    transform: rotateX(-90deg);
+  }
+
+  100% {
+    transform: rotateX(-90deg);
+  }
+}
+
+@keyframes lid-keyboard-area {
+  0% {
+    background-color: #dfdfdf;
+  }
+
+  50% {
+    background-color: #bbb;
+  }
+
+  100% {
+    background-color: #dfdfdf;
+  }
+}
+
+@keyframes screen-shade {
+  0% {
+    background-position: -20px 0px;
+  }
+
+  5% {
+    background-position: -40px 0px;
+  }
+
+  20% {
+    background-position: 200px 0;
+  }
+
+  50% {
+    background-position: -200px 0;
+  }
+
+  80% {
+    background-position: 0px 0px;
+  }
+
+  85% {
+    background-position: -30px 0;
+  }
+
+  90% {
+    background-position: -20px 0;
+  }
+
+  100% {
+    background-position: -20px 0px;
+  }
+}
+
+@keyframes keys {
+  0% {
+    box-shadow: 0 -2px 0 #222;
+  }
+
+  5% {
+    box-shadow: 1 -1px 0 #222;
+  }
+
+  20% {
+    box-shadow: -1px 1px 0 #222;
+  }
+
+  25% {
+    box-shadow: -1px 1px 0 #222;
+  }
+
+  60% {
+    box-shadow: -1px 1px 0 #222;
+  }
+
+  80% {
+    box-shadow: 0 -2px 0 #222;
+  }
+
+  85% {
+    box-shadow: 0 -2px 0 #222;
+  }
+
+  87% {
+    box-shadow: 0 -2px 0 #222;
+  }
+
+  100% {
+    box-shadow: 0 -2px 0 #222;
+  }
+}
+
+@keyframes shadow {
+  0% {
+    transform: rotateX(80deg) rotateY(0deg) rotateZ(0deg);
+    box-shadow: 0 0 60px 40px rgba(0,0,0,0.3);
+  }
+
+  5% {
+    transform: rotateX(80deg) rotateY(10deg) rotateZ(0deg);
+    box-shadow: 0 0 60px 40px rgba(0,0,0,0.3);
+  }
+
+  20% {
+    transform: rotateX(30deg) rotateY(-20deg) rotateZ(-20deg);
+    box-shadow: 0 0 50px 30px rgba(0,0,0,0.3);
+  }
+
+  25% {
+    transform: rotateX(80deg) rotateY(-20deg) rotateZ(50deg);
+    box-shadow: 0 0 35px 15px rgba(0,0,0,0.1);
+  }
+
+  60% {
+    transform: rotateX(80deg) rotateY(0deg) rotateZ(-50deg) translateX(30px);
+    box-shadow: 0 0 60px 40px rgba(0,0,0,0.3);
+  }
+
+  100% {
+    box-shadow: 0 0 60px 40px rgba(0,0,0,0.3);
+  }
+}
+
+			
+			@-webkit-keyframes spin {
+			  0% { -webkit-transform: rotate(0deg); }
+			  100% { -webkit-transform: rotate(360deg); }
+			}
+			
+			@keyframes spin {
+			  0% { transform: rotate(0deg); }
+			  100% { transform: rotate(360deg); }
+			}
+			
+			/* Add animation to "page content" */
+			.animate-bottom {
+			  position: relative;
+			  -webkit-animation-name: animatebottom;
+			  -webkit-animation-duration: 1s;
+			  animation-name: animatebottom;
+			  animation-duration: 1s
+			}
+			
+			@-webkit-keyframes animatebottom {
+			  from { bottom:-100px; opacity:0 } 
+			  to { bottom:0px; opacity:1 }
+			}
+			
+			@keyframes animatebottom { 
+			  from{ bottom:-100px; opacity:0 } 
+			  to{ bottom:0; opacity:1 }
+			}
+			
+			#myDiv {
+			  display: none;
+			  
+			}
+
+			.my{
+				background-color: black;height: 775px;width: 100%;
+			}
+			</style>
+
+
+
+</head>
+<body>
+	<body onload="myFunction()" style="margin:0;">
+
+		<div id="loader">
+			<div class="my">
+			<div class="macbook" style="height: 150px;width: 30%;">
+				<div class="inner">
+				  <div class="screen">
+					<div class="face-one">
+					  <div class="camera"></div>
+					  <div class="display">
+						<div class="shade"></div>
+					  </div>
+					  <span>MacBook Air</span>
+					</div>
+				<title>Layer 1</title>
+				</div>
+				  <div class="macbody">
+					<div class="face-one">
+					  <div class="touchpad">
+					  </div>
+					  <div class="keyboard">
+						<div class="key"></div>
+						<div class="key"></div>
+						<div class="key"></div>
+						<div class="key"></div>
+						<div class="key"></div>
+						<div class="key space"></div>
+						<div class="key"></div>
+						<div class="key"></div>
+						<div class="key"></div>
+						<div class="key"></div>
+						<div class="key"></div>
+						<div class="key"></div>
+						<div class="key"></div>
+						<div class="key"></div>
+						<div class="key"></div>
+						<div class="key"></div>
+						<div class="key"></div>
+						<div class="key"></div>
+						<div class="key"></div>
+						<div class="key"></div>
+						<div class="key"></div>
+						<div class="key"></div>
+						<div class="key"></div>
+						<div class="key"></div>
+						<div class="key"></div>
+						<div class="key"></div>
+						<div class="key"></div>
+						<div class="key"></div>
+						<div class="key"></div>
+						<div class="key"></div>
+						<div class="key"></div>
+						<div class="key"></div>
+						<div class="key"></div>
+						<div class="key"></div>
+						<div class="key"></div>
+						<div class="key"></div>
+						<div class="key"></div>
+						<div class="key"></div>
+						<div class="key"></div>
+						<div class="key"></div>
+						<div class="key"></div>
+						<div class="key"></div>
+						<div class="key"></div>
+						<div class="key"></div>
+						<div class="key"></div>
+						<div class="key"></div>
+						<div class="key"></div>
+						<div class="key"></div>
+						<div class="key"></div>
+						<div class="key"></div>
+						<div class="key"></div>
+						<div class="key"></div>
+						<div class="key"></div>
+						<div class="key"></div>
+						<div class="key"></div>
+						<div class="key"></div>
+						<div class="key"></div>
+						<div class="key"></div>
+						<div class="key"></div>
+						<div class="key f"></div>
+						<div class="key f"></div>
+						<div class="key f"></div>
+						<div class="key f"></div>
+						<div class="key f"></div>
+						<div class="key f"></div>
+						<div class="key f"></div>
+						<div class="key f"></div>
+						<div class="key f"></div>
+						<div class="key f"></div>
+						<div class="key f"></div>
+						<div class="key f"></div>
+						<div class="key f"></div>
+						<div class="key f"></div>
+						<div class="key f"></div>
+						<div class="key f"></div>
+					  </div>
+					</div>
+					<div class="pad one"></div>
+					<div class="pad two"></div>
+					<div class="pad three"></div>
+					<div class="pad four"></div>
+				  </div>
+				</div>
+				<div class="shadow"></div>
+			</div>
+			  </div>
+			  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		</div>
+		
+		<div style="display:none;" id="myDiv" class="animate-bottom">
+
+
+
+
+	<div class="h50 w100">
+
+   	<div class="h50 w80 fl " style="background: #464c4f;">
+   		<i class="fa fa-clock-o font20 pclw mrl100" aria-hidden="true" ></i>
+   		<span style="color:white;">2023-09-19</span>
+   		<i class="fa fa-bolt font20 pclw mrl10" aria-hidden="true"></i>
+   		<span style="color:white;">bapunager,ahmedbad</span>
+    </div>
+
+     <div class="h50 w20 fl" style="background:#464c4f;">
+   		<i class="fa fa-facebook blk font20 mrl10" aria-hidden="true" ></i>
+   		<i class="fa fa-twitter blk font20 mrl10" aria-hidden="true" ></i>
+   		<i class="fa fa-instagram blk font20 mrl10" aria-hidden="true" ></i>
+   	</div>
+</div>
+
+
+
+<div class="h100 w100  ">
+	<div class="h100 w30  fl" >
+   		<img src="1.png" class="mrl100 mt20" >
+     </div>
+
+       <div class="h100 w70 fl">
+   	<a href="index.html">  <span class="blk1  fl font10 mt30 " >HOME</span></a>
+   	<a href="Blog.html">	<span class="blk1 fl font10 mt30 mrl20" >BLOG</span></a>
+   	<a href="SHOPLIST.html">	<span class="blk1 fl font10 mt30 mrl20" >SHOP LIST</span></a>
+   	<a href="ACCOUNT.html">	<span class="blk1 fl font10 mt30 mrl20" >ACCOUNT</span></a>
+   	<a href="CART.html">	<span class="blk1 fl font10 mt30 mrl20" >CART</span></a>
+   	<a href="CHECKOUT.html">	<span class="blk1 fl font10 mt30 mrl20" >CHECKOUT</span></a>
+   		<span class="blk1 fl font10 mt30 mrl20" >DETAIL</span>
+    <a href="ABOUT US.html">   <span class="blk1 fl font10 mt30 mrl20" >ABOUT US</span></a>
+    <a href="CONTACT US.html">  <span class="blk1 fl font10 mt30 mrl20" >CONTACT US</span></a>
+        <i class="fa fa-search blk1 mrl30 mt30" aria-hidden="true"></i>
+       </div>
+
+</div>
+
+<div class="h150 w100" style="background: #464c4f"></div>
+<div class="h50  w100 " style="margin-top: -10px;">
+	
+  <center>
+  	<div class="h20 w10 clw">
+    <span class="font20 blk1 clw"> Home |</span>
+    <span class="font20 blk1 clw">Shop</span>
+  </div>  
+  </center>
+  
+</div>
+
+<!----------1-----line 4img------------>
+<div class="h400 w100 ">
+	<border>
+
+	<div class="h400 w20 mrl100 fl zoom bs">
+		<div class="h200 w100 clgn hide" >
+<img src="39.jpg" width="100%" height="100%" style="transition: 2s;">
+		</div>
+		<span class="pclw font20 salebk pr30" >SALE</span>
+		<center><p class="font20 mt30 ">Building Dozer</p>
+			<span><del>$370.00</del>&nbsp;  $320.00</span><br>
+			<button class="addcart mt10" >Add to cart</button></center></border>
+</div>
+
+
+	<div class="h400 w20 fl zoom mrl20 bs">
+		<div class="h200 w100 fl hide">
+			<img src="40.jpg" width="100%" height="100%" style="transition:2s">
+		</div>
+		<span class="pclw font20 salebk pr30">SALE</span>
+		<button class="pclw mrl160 pr30 font20" style="background:#9c0909">HOT</button>
+		<center><p class="font20 mt30">Bricks</p>
+			<span><del>$370.00</del>&nbsp; $320.00</span><br>
+     <button class="addcart mt10">Add to cart</button>
+		</center>
+	</div>
+
+
+
+
+
+	<div class="h400 w20 fl zoom mrl20 bs">
+		<div class="h200 w100 fl hide">
+			<img src="41.jpg" width="100%" height="100%" style="transition:2s">
+		</div>
+		<span class="pclw font20 salebk pr30">SALE</span>
+	    <center><p class="font20 mt30">Still Cutter</p>
+			<span><del>$370.00</del>&nbsp; $320.00</span><br>
+     <button class="addcart mt10">Add to cart</button>
+		</center>
+	</div>
+
+
+
+	<div class="h400 w20 fl zoom mrl20 bs">
+		<div class="h200 w100 fl hide">
+			<img src="42.jpg" width="100%" height="100%" style="transition:2s">
+		</div>
+		<span class="pclw font20 salebk pr30">SALE</span>
+	    <center><p class="font20 mt30">Elements Carrier</p>
+			<span><del>$370.00</del>&nbsp; $320.00</span><br>
+     <button class="addcart mt10">Add to cart</button>	
+		</center>
+	</div>
+	</div>
+
+<div class="h50 w100"></div>
+<!----------2-----line 4img------------>
+  
+  <div class="h400 w100 ">
+	<border>
+
+	<div class="h400 w20 mrl100 fl zoom bs">
+		<div class="h200 w100 clgn hide" >
+<img src="43.jpg" width="100%" height="100%" style="transition: 2s;">
+		</div>
+		<span class="pclw font20 salebk pr30" >SALE</span>
+		<center><p class="font20 mt30 ">Pipeline Elements</p>
+			<span><del>$370.00</del>&nbsp;  $320.00</span><br>
+			<button class="addcart mt10" >Add to cart</button></center></border>
+</div>
+
+
+	<div class="h400 w20 fl zoom mrl20 bs">
+		<div class="h200 w100 fl hide">
+			<img src="44.jpg" width="100%" height="100%" style="transition:2s">
+		</div>
+		<span class="pclw font20 salebk pr30">SALE</span>
+		<button class="pclw mrl160 pr30 font20" style="background:#9c0909">HOT</button>
+		<center><p class="font20 mt30">Bull Dozer</p>
+			<span><del>$370.00</del>&nbsp; $320.00</span><br>
+     <button class="addcart mt10">Add to cart</button>
+		</center>
+	</div>
+
+
+
+
+
+	<div class="h400 w20 fl zoom mrl20 bs">
+		<div class="h200 w100 fl hide">
+			<img src="45.jpg" width="100%" height="100%" style="transition:2s">
+		</div>
+		<span class="pclw font20 salebk pr30">SALE</span>
+	    <center><p class="font20 mt30">Concrete Vibrator</p>
+			<span><del>$370.00</del>&nbsp; $320.00</span><br>
+     <button class="addcart mt10">Add to cart</button>
+		</center>
+	</div>
+
+
+
+	<div class="h400 w20 fl zoom mrl20 bs">
+		<div class="h200 w100 fl hide">
+			<img src="46.jpg" width="100%" height="100%" style="transition:2s">
+		</div>
+		<span class="pclw font20 salebk pr30">SALE</span>
+	    <center><p class="font20 mt30">Surveying Element</p>
+			<span><del>$370.00</del>&nbsp; $320.00</span><br>
+     <button class="addcart mt10">Add to cart</button>	
+		</center>
+	</div>
+	</div>
+
+
+<div class="h100 w100 ">
+	<center>
+	<button class="pagebtn2 mt30 mrl10"><<</button>
+	<button class="pagebtn2 mrl10 btn2">1</button>
+	<button class="pagebtn2 mrl10" style="background: #2e85b8;">2</button>
+	<button class="pagebtn2 mrl10">3</button>
+	<button class="pagebtn2 mrl10">...</button>
+	<button class="pagebtn2 mrl10">10</button>
+	<button class="pagebtn2 mrl10">>></button>
+	</center>
+</div>
+<!-----------------3 last find inst--------->
+<div class="h800 w100 fl " style="background: url(2.png);background-size: cover;background-color: black;">
+   <center>
+      <h1 class="pclw font25">Find Us on Instagram<hr class="w20"></h1>
+   </center>
+   <div class="h200 w90 fl  mrl100">
+      <div class="h200 w15 clb fl" style="background-image: url(33.jpg);background-size: cover;"></div>
+      <div class="h200 w15 clb fl" style="background-image: url(34.jpg);background-size: cover;"></div>
+      <div class="h200 w15 clb fl" style="background-image: url(35.jpg);background-size: cover;"></div>
+      <div class="h200 w15 clb fl" style="background-image: url(36.jpg);background-size: cover;"></div>
+      <div class="h200 w15 clb fl" style="background-image: url(37.jpg);background-size: cover;"></div>
+      <div class="h200 w15 clb fl" style="background-image: url(38.jpg);background-size: cover;"></div>
+   </div>
+   <br>
+
+
+<div class="h500 w30 mt80 fl">
+
+    <h1 class=" font30 mt-20 pclw" style="margin-left: 80px">NewMag</h1>
+    <hr class="w70">
+    <center>
+       <p class="font10 mrl20 pclw">amet, consetetur sadipscing elitr, sed diam nonumy<br> eirmod tempor invidunt ut labore et dolore magna<br> aliquyam erat.</p>
+       
+    </center>
+    <i class="fa fa-facebook-official fl font30 mrl80 mt30 pclw " aria-hidden="true"></i>
+    <i class="fa fa-twitter fl mrl20 font30 mt30 pclw" aria-hidden="true"></i>
+    <i class="fa fa-instagram fl mrl20 font30 mt30 pclw" aria-hidden="true"></i>
+
+   </div>
+
+
+
+<div class="h500 w20  fl">
+   <h1 class="mrl30 mt50 pclw">Categories</h1>
+   <hr class="w90">
+   <span class="mrl20 pclw">Entertainment</span>
+   <br><br>
+   <span class="mrl20 pclw">Sports</span>
+   <br><br>
+   <span class="mrl20 pclw">Polictics</span>
+   <br><br>
+   <span class="mrl20 pclw">National</span>
+   <br><br>
+   <span class="mrl20 pclw">Blog</span>
+   <br><br>
+
+ </div>
+
+<div class="h500 w20  fl">
+   <h1 class="mrl30 mt50 pclw">Popular Tags</h1>
+   <hr class="w90">
+    <span class="mrl20 pclw">Entertainment</span>
+   <br><br>
+   <span class="mrl20 pclw">Sports</span>
+   <br><br>
+   <span class="mrl20 pclw">Polictics</span>
+   <br><br>
+   <span class="mrl20 pclw">National</span>
+   <br><br>
+   <span class="mrl20 pclw">Blog</span>
+   <br><br>
+</div>
+
+
+
+<div class="h500 w30  fl">
+   <h1 class="mrl30 mt50 pclw">Newsletter</h1>
+   <hr class="w90">
+   <span class="mrl20 pclw">Dont Miss Anything</span>
+   <br><br>
+    <span class="mrl20 pclw">Subscribe to our #newsletter</span>
+   <br><br>
+   <form>
+      <input class="h25 w70 mrl20 fl" type="text" placeholder="Enter Email">
+      <button style="background:red;border:none;color: white;"><i class="fa fa-paper-plane font25" aria-hidden="true"></i></button>
+
+   </form>
+</div>
+</div>
+
+<script>
+var myVar;
+
+function myFunction() {
+  myVar = setTimeout(showPage, 3000);
+}
+
+function showPage() {
+  document.getElementById("loader").style.display = "none";
+  document.getElementById("myDiv").style.display = "block";
+}
+</script>
+
+
+
+
+</div>
+</body>
+</html>
